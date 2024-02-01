@@ -1,0 +1,54 @@
+/*
+-   Project-2 "GUPT"
+-   Designed | Developed by Mayank & HRitik
+-   Copyright by Mayank( https://github.com/MayankDevil/ ) & HRitik ( https://github.com/Hritikkumar975/ )
+-   CSS : ./css/style.css
+*/
+*
+{
+	user-select: none;
+	margin:0;
+	padding:0;
+	color:var(--black);
+	text-decoration: none;
+	font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+	border:none;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:root
+{
+    --white:#ffffff;
+    --black:#000000;
+    --dark:#343a40;
+    --light:#f8f9fa;
+    --gray:#6c757d;
+    --primary:#dc3545;
+    --secondary:#c23616;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background: var(--black);
+}
+::-webkit-scrollbar-thumb
+{
+	background: linear-gradient(to top,#20c997,#17a2b8);
+}
+::selection
+{
+	background: transparent;
+}
+::placeholder
+{
+    color:var(--primary);
+}
+
+/*
+    the end ==========================
+*/
