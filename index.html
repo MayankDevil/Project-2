@@ -31,15 +31,69 @@
 
         <!--
             ==================
-            [ header section ]
+            [ header section ] ----------------------------------------------------
             ==================
         -->
         <header id="header">
 
         </header>
         <!--
+            =====================================
+            [ unqiue password generator section ] ----------------------------------------
+            =====================================
+        -->
+        <section id="unique_password_generator">
+            <div class="container">
+
+                <!-- ( random password field ) -->
+                <input type="text" class="fld" id="unique_password_fld" placeholder="Random Password Generat"/>
+                
+                <div>
+                    <!-- ( set key length field ) -->
+                    <label for="key_length">
+                        <input type="number" min="4" max="30" placeholder="between{4-30}" id="key_length"> SET LENGTH  
+                    </label>
+                
+                    <!-- ( password generator button ) -->
+                    <button id="unique_password_btn"> Generate New Password </button>
+                
+                    <!-- ( select number ) -->
+                    <label for="number_check">
+                        <input type="checkbox" name="num" id="number_check" value="1"> include Number
+                    </label>
+                
+                    <!-- ( select symbol ) -->
+                    <label for="symbol_check">
+                        <input type="checkbox" name="sym" id="symbol_check" value="1" > include Symbol
+                    </label>
+                
+                </div>
+
+            </div>
+        </section>
+        <!--
+            ======================================
+            [ secure password validation section ] ----------------------------------------------------
+            ======================================
+        -->
+        <section id="secure_password_validation">
+            <div class="container">
+
+                <form action="#">
+
+                    <input type="text" name="secure_password_fld" class="fld" id="secure_password_fld">
+
+                    <button id="secure_password_btn"> Secure Password Validation </button>
+
+                    <div id="secure_alert"></div>
+
+                </form>
+
+            </div>
+        </section>
+        <!--
             ==================
-            [ footer section ]
+            [ footer section ] ---------------------------------------------------
             ==================
         -->
         <footer id="footer">
@@ -52,6 +106,8 @@
 		| script |
 		----------
 	-->
+    <script src="js/dataSet.js"></script>
+    <script src="js/unique_password.js"></script>
 	<script src="js/checkSet.js"></script>
     <script src="js/script.js"></script>
     
