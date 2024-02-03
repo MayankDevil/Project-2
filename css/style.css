@@ -50,5 +50,50 @@
 }
 
 /*
+	body css --------------------------
+*/
+.container
+{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/*
+	css ------------------------
+*/
+.fld
+{
+	width: 100%;
+	padding: 1rem;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	color: var(--secondary);
+	background: var(--light);
+	border:1px solid var(--gray);
+	border-radius: 10px;
+	box-shadow: 1px 2px 5px var(--gray);
+}
+
+section :is(
+	#secure_password_btn,
+	#unique_password_btn
+)
+{
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-size: 1rem;
+	background: var(--primary);
+	border-radius: 10px;
+}
+
+section :is(
+	#secure_password_btn,
+	#unique_password_btn
+):hover
+{
+	border-radius: 0px;
+	box-shadow: 5px 5px 10px var(--gray);
+}
+
+/*
     the end ==========================
 */
