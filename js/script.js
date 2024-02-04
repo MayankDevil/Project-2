@@ -7,7 +7,7 @@
 try
 {
     // todocode logic application here
-
+    
     /*
         --------------------------------------------------------------------------------
         } random function : return random number between pass arugment range
@@ -18,8 +18,6 @@ try
     {
         return Math.floor(Math.random() * range)
     }
-
-    // console.log(random(10))
     
     /*
         --------------------------------------------------------------------------------
@@ -31,9 +29,6 @@ try
     {
         return data[random(data.length)]
     }
-
-    
-
 
 
     document.title = `Mayank & HRitik`
