@@ -94,6 +94,32 @@ section :is(
 	box-shadow: 5px 5px 10px var(--gray);
 }
 
+#secure_alert
+{
+	padding: 1rem;
+	font-weight: bold;
+	font-size: 1rem;
+}
+.isValid
+{
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 1rem;
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	border-radius: 10px;
+}
+.isUnvalid
+{
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 1rem;
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	border-radius: 10px;
+}
 /*
     the end ==========================
 */
