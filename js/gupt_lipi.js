@@ -29,6 +29,8 @@ try
     symbol = "`~!@#$%^&*()-_+={}:<>?[],.;\|/"
 
     letter = capital_letter + capital_letter.toLowerCase()
+    
+    space = ' '
 
     // [ require ] -----
 

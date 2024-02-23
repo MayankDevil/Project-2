@@ -115,15 +115,52 @@ try
     {
         return (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/.test(password))
     }
+    
+    /*
+        --------------------------------------------------------------------------------
+        } shuffle function : get data argument return equal unique or unorder data
+        --------------------------------------------------------------------------------
+    */
+    
+    function shuffle(data)
+    {                        
+        const data_array = data.split('');
+        
+        for (let i = data_array.length - 1; i > 0; i--)
+        {
+            const o = Math.floor(Math.random() * (i + 1));
+            
+            [data_array[i], data_array[o]] = [data_array[o], data_array[i]];
+        }
+        
+        return data_array.join('');
+    }
+    
+    /*
+        --------------------------------------------------------------------------------
+        } numberCode(data) : pass data return in random number format
+        --------------------------------------------------------------------------------
+    */
+    
+    function numberCode(data)
+    {
+        let num = 11
+
+        for (let i = 0; i < data.length; i++) num = (num << 3) - num + data.charCodeAt(i)
+        
+        return num
+    }
+    
+    // console.log(numberCode('client'))
 
 
-/*
-    isNaN()      // if isNumber || Convertable inNumber so return false else true
-*/
+    /*
+        isNaN()      // if isNumber || Convertable inNumber so return false else true
+    */
 
-/*
-    isFinite()  // if isNumber || COnvertable inNumber & Finite so return true else false
-*/
+    /*
+        isFinite()  // if isNumber || COnvertable inNumber & Finite so return true else false
+    */
 
     document.title = `Mayank & HRitik`
 }
