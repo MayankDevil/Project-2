@@ -34,76 +34,122 @@
             [ header section ] ----------------------------------------------------
             ==================
         -->
-        <header id="header">
-            <!-- { side-clip } -->
-            <div class="side-clip"></div>
-            
+        <header class="" id="header">
+        </header>
+        <!--
+            ===================
+            [ landing section ] ----------------------------------------------------
+            ===================
+        -->
+        <section class="" id="landing">
             <div class="container">
-                <div class="row">
-                    <!-- ( first column ) -->
-                    <div class="col">
-                        
-                        <h1> GUPT </h1>
-                        
-                        <h3> Ensuring Digital Data Security with Absolute Privacy </h3>
-                        
-                        <h6> Your digital fortress, zero data collection, just strong security. Control, fortify, and elevate your online safety. Discover us for a confidently secure experience. </h6>
-                        
-                        <a href="#" id="download_btn" title="Free Download OR Services"> <span class="bi bi-person"></span> GUPT App </a>
+                <div class="row border-bottom border-lg">
+
+                    <!-- { introduction } -->
+                    <div class="col-md-6 col-12 py-5">
+
+                        <div class="display-1 py-5" id="title"> GUPT </div>
+
+                        <div class="h1 text-muted py-3"> Ensuring Digital Data Security with Absolute Privacy </div>
+
+                        <p class="lead py-2"> Your digital fortress, zero data collection, just strong security. Control, fortify, and elevate your online safety. Discover us for a confidently secure experience. </p>
+
+                        <a href="#" id="download_btn" title="Free Download OR Services"> <span class="bi bi-file-earmark-arrow-down"></span> GUPT App </a>
 
                     </div>
-                    <!-- ( last column ) -->
-                    <div class="col">
 
-                        <aside id="aside">
+                    <!-- { aside feature } -->
+                    <div class="col-md-6 col-12">
 
-                            <button class="btn"> Unique Password Generator </button>
+                        <aside class="" id="aside">
+
+                            <button class="feature_btn"> <span class="bi bi-file-earmark-lock2-fill"></span> Unique Password Generator </button>
                             
-                            <button class="btn"> Secure Password Validation </button>
+                            <button class="feature_btn"> <span class="bi bi-person-fill-lock"></span> Secure Password Validation </button>
                             
-                            <button class="btn"> Data CryptoGraphy </button>
+                            <button class="feature_btn"> <span class="bi bi-database-fill-lock"></span> Data CryptoGraphy </button>
                             
-                            <button class="btn"> About Developers </button>
+                            <button class="feature_btn"> <span class="bi bi-key-fill"></span> CryptoKey Generator </button>
+
+                            <button class="feature_btn"> <span class="bi bi-people-fill"></span> About Developers </button>
                             
                         </aside>
-                        
+
+                        <h3 class="p-3 py-5"> Quality Features <span class="bi bi-clipboard-check"></span> </h3>
+
                     </div>
-                    
+
                 </div>
             </div>
-        </header>
+        </section>
         <!--
             =====================================
             [ unique password generator section ] ----------------------------------------
             =====================================
         -->
-        <section id="unique_password_generator">
+        <section class="" id="unique_password_generator">
             <div class="container">
+                <div class="row">
 
-                <!-- ( random password field ) -->
-                <input type="text" class="fld" id="unique_password_fld" placeholder="Random Password Generat"/>
+                    <!-- { unique heading } -->
+                    <div class="col-md-6 col-12 py-5 order-md-last">
+
+                        <div class="d-block text-center my-5">
+
+                            <div class="text-center"> <span class="bi bi-file-earmark-lock2-fill icon"></span> </div>
+                            
+                            <h1 class="p-md-1 my-5"> Unique Password Generator </h1>
+                            
+                            <div class="lead py-3"> Easy, Secure, Yours. Create custom passwords with ease - pick the length, add numbers or symbols. Unleash unbeatable security in seconds! </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- { password generator } -->
+                    <div class="col-md-6 col-12 py-5">
+
+                        <div class="shadow-lg rounded my-5 p-3" id="password_generator_box">
+
+                            <!-- ( random password field ) -->
+                            <input type="text" class="fld form-control" id="unique_password_fld" placeholder="Random Password Generat"/>
                 
-                <div>
-                    <!-- ( set key length field ) -->
-                    <label for="key_length">
-                        <input type="number" min="4" max="30" placeholder="between{4-30}" id="key_length"> SET LENGTH  
-                    </label>
-                
-                    <!-- ( password generator button ) -->
-                    <button id="unique_password_btn"> Generate New Password </button>
-                
-                    <!-- ( select number ) -->
-                    <label for="number_check">
-                        <input type="checkbox" name="num" id="number_check" value="1"> include Number
-                    </label>
-                
-                    <!-- ( select symbol ) -->
-                    <label for="symbol_check">
-                        <input type="checkbox" name="sym" id="symbol_check" value="1" > include Symbol
-                    </label>
-                
+                            <!-- ( set key length field ) -->
+                            <label for="key_length" class="d-flex align-items-center justify-content-between pl-2 my-3 border-bottom">
+
+                                <input type="number" min="4" max="30" placeholder="between{4-30}" class="p-2 w-50" id="key_length"> SET LENGTH  
+
+                                <button class="copy p-3"> <span class="bi bi-files"></span> copy </button>
+                            
+                            </label>
+                        
+                            <!-- ( password generator button ) -->
+                            <button class="btn btn-dark" id="unique_password_btn"> Generate New Password </button>
+                            
+                            <!-- ( select number ) -->
+                            <div class="my-2">
+                                <div class="form-check py-3 px-3 d-block border border-dark rounded">
+                    
+                                    <input class="form-check-input" type="checkbox" name="num" id="number_check" value="1">
+                                    <label class="form-check-label" for="number_check" class=""> include Number in password </label>
+                    
+                                </div>
+                            </div>
+                            <!-- ( select symbol ) -->
+                            <div class="my-2">
+                                <div class="form-check py-3 px-3 d-block border border-dark rounded">
+
+                                    <input class="form-check-input" type="checkbox" name="sym" id="symbol_check" value="1" > 
+                                    <label class="form-check-label" for="symbol_check"> include Symbol in password </label>
+
+                                </div>
+                            </div>
+                                    
+                        </div>
+
+                    </div>
+
                 </div>
-
             </div>
         </section>
         <!--
@@ -111,30 +157,26 @@
             [ secure password validation section ] ----------------------------------------------------
             ======================================
         -->
-        <section id="secure_password_validation">
-            <div class="container">
-
-                <div id="">
-
-                    <input type="text" name="secure_password_fld" class="fld" id="secure_password_fld">
-
-                    <button id="secure_password_btn"> Secure Password Validation </button>
-
-                    <div class="" id="secure_alert"></div>
-
-                </div>
-
-            </div>
+        <section class="" id="secure_password_validation">
+        </section>
+        <!--
+            =============================
+            [ data cryptography section ] ----------------------------------------------------
+            =============================
+        -->
+        <section class="" id="data_crypto"> 
         </section>
         <!--
             ==================
             [ footer section ] ---------------------------------------------------
             ==================
         -->
-        <footer id="footer">
+        <footer class="" id="footer">
+            <div class="container">
 
-            <h5> CopyRight &copy; Designed | Developed by <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a> </h5>
-
+                <h6 class="py-5 p-1"> CopyRight &copy; Designed | Developed by <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a> </h6>
+                
+            </div>
         </footer>
 
     </main>
