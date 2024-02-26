@@ -35,6 +35,9 @@
             ==================
         -->
         <header class="" id="header">
+            <div class="container">
+                
+            </div>
         </header>
         <!--
             ===================
@@ -48,7 +51,9 @@
                     <!-- { introduction } -->
                     <div class="col-md-6 col-12 py-5">
 
-                        <div class="display-1 py-5" id="title"> GUPT </div>
+                        <div class="display-5" id="title"> &#2327;&#2369;प्त </div>
+
+                        <div class="display-1 py-5" id="subtitle"> GUPT  </div>
 
                         <div class="h1 text-muted py-3"> Ensuring Digital Data Security with Absolute Privacy </div>
 
@@ -112,12 +117,12 @@
                         <div class="shadow-lg rounded my-5 p-3" id="password_generator_box">
 
                             <!-- ( random password field ) -->
-                            <input type="text" class="fld form-control" id="unique_password_fld" placeholder="Random Password Generat"/>
+                            <input type="text" class="fld form-control my-3" id="unique_password_fld" placeholder="Unique Password"/>
                 
                             <!-- ( set key length field ) -->
-                            <label for="key_length" class="d-flex align-items-center justify-content-between pl-2 my-3 border-bottom">
+                            <label for="key_length" class="d-flex align-items-center justify-content-between pl-2 my-5 border-bottom">
 
-                                <input type="number" min="4" max="30" placeholder="between{4-30}" class="p-2 w-50" id="key_length"> SET LENGTH  
+                                <input type="number" min="4" max="30" placeholder="between{4-30}" class="p-2 w-25" id="key_length"> SET LENGTH  
 
                                 <button class="copy p-3"> <span class="bi bi-files"></span> copy </button>
                             
@@ -127,7 +132,7 @@
                             <button class="btn btn-dark" id="unique_password_btn"> Generate New Password </button>
                             
                             <!-- ( select number ) -->
-                            <div class="my-2">
+                            <div class="my-3">
                                 <div class="form-check py-3 px-3 d-block border border-dark rounded">
                     
                                     <input class="form-check-input" type="checkbox" name="num" id="number_check" value="1">
@@ -158,6 +163,48 @@
             ======================================
         -->
         <section class="" id="secure_password_validation">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col"></div>
+                    <div class="col-md-6 col-10 border-top">
+
+                        <!-- { secure heading } -->
+                        <div class="w-100 py-3">
+
+                            <div class="d-block text-center my-5">
+
+                                <div class="text-center"> <span class="bi bi-person-fill-lock icon"></span> </div>
+                                
+                                <h1 class="p-md-1 my-5"> Secure Password Validation </h1>
+                                
+                                <div class="lead py-3"> Elevate your password's robustness effortlessly. Fortify your online security with a swift and simple strength check. </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- { password validation } -->
+                        <div class="w-100">
+
+                            <div class="text-center" id="secure_password">
+
+                                <input type="text" name="secure_password_fld" class="fld form-control mb-3" id="secure_password_fld" placeholder="Secure Password Level"/>
+
+                                <button class="btn btn-dark" id="secure_password_btn"> Secure Password Validation </button>
+
+                            </div>
+
+                            <!-- ( validation output result ) -->
+                            <div class="my-5" id="validation"></div>
+
+                        </div>
+
+                    </div>
+                    <div class="col"></div>
+                
+                </div>
+            </div>
         </section>
         <!--
             =============================
@@ -174,7 +221,7 @@
         <footer class="" id="footer">
             <div class="container">
 
-                <h6 class="py-5 p-1"> CopyRight &copy; Designed | Developed by <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a> </h6>
+                <h6 class="py-5 p-1"> CopyRight <span class="ent">&copy;</span> Designed | Developed by <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a> </h6>
                 
             </div>
         </footer>
