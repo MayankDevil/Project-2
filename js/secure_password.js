@@ -16,7 +16,7 @@ try
 
     let secure_password_btn = document.getElementById("secure_password_btn")
 
-    let secure_alert = document.getElementById('secure_alert')
+    let secure_alert = document.getElementById('validation')
 
     /*
         -----------------------------------------------------------------------------
@@ -28,7 +28,7 @@ try
     {
         let secure = 0 // default security level
 
-        alert_statement = `<div> Please use </div>`
+        alert_statement = `<div class='h2 text-muted p-3'> Please use </div>`
 
         if (secure_password_fld.value == '')
         {
@@ -44,7 +44,7 @@ try
             }
             else
             {
-                alert_statement += `<div> Capital Letter in this (A-Z) </div>`
+                alert_statement += `<div class="h5 text-end py-2"> _Capital Letter in this (A-Z) </div>`
             }
             if (/[a-z]/.test(secure_password_fld.value))
             {
@@ -52,7 +52,7 @@ try
             }
             else
             {
-                alert_statement += `<div> Small Letter in this (a-z) </div>`
+                alert_statement += `<div class="h5 text-end py-2"> _Small Letter in this (a-z) </div>`
             }
             if (/\d/.test(secure_password_fld.value))
             {
@@ -60,7 +60,7 @@ try
             }
             else
             {
-                alert_statement += `<div> Number in this (0-9) </div>`
+                alert_statement += `<div class="h5 text-end py-2"> _Number in this (0-9) </div>`
             }
             if (/[!@#$%^&*(),.?":{}|<>]/.test(secure_password_fld.value))
             {
@@ -68,35 +68,35 @@ try
             }
             else
             {
-                alert_statement += `<div> Symbol in this (! @ # $ % &) </div>`
+                alert_statement += `<div class="h5 text-end py-2"> _Symbol in this (! @ # $ % &) </div>`
             }
             if (true)
             {
-                secure += 20
+                secure += random(20)
             }
 
             switch(parseInt(secure))
             {
                 case 100:
-                    alert_statement += `<div class='isValid'> Very Good Password <div>`
+                    alert_statement += `<div class='isValid alert alert-succes'> Very Good Password <div>`
                     break;
                 case 80 :
-                    alert_statement += `<div class='isValid'> Your password Security Level is very High <div>`
+                    alert_statement += `<div class='isValid alert alert-success'> Your password Security Level is very High <div>`
                     break;
                 case 60 :
-                    alert_statement += `<div class='isValid'> Your password Level is Secure, Nice! <div>`
+                    alert_statement += `<div class='isValid alert alert-info'> Your password Level is Secure, Nice! <div>`
                     break;
                 case 40 :
-                    alert_statement += `<div class='isValid'> Password is Weak <div>`
+                    alert_statement += `<div class='isValid alert alert-primary'> Password is Weak <div>`
                     break;    
                 case 20 :
-                    alert_statement += `<div class='isUnvalid'> Require better password <div>`
+                    alert_statement += `<div class='isUnvalid alert alert-warning'> Require better password <div>`
                     break;
                 default :
-                    alert_statement += `<div class='isUnvalid'> Your security in Danger <div>` 
+                    alert_statement += `<div class='isUnvalid alert alert-danger'> Your security in Danger <div>` 
             }
 
-            secure_alert.innerHTML = `<div> Your Password is ${secure}% secure <div> ${alert_statement} `
+            secure_alert.innerHTML = `<div class="h4 text-center py-3"> <span class="bi bi-shield-lock"></span> Your Password is ${secure}% secure </div> ${alert_statement} `
 
             console.log((secure_password_fld.value.match(/[a-zA-Z]/g) || []).length + secure_password_fld.value.length)
         }
