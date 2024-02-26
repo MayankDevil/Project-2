@@ -117,9 +117,14 @@
 	font-size: 1.1em;
 	color:var(--bs-success);
 }
-#title
+#subtitle
 {
 	text-shadow: 1px 2px 5px var(--gray);
+}
+#title
+{
+	color: var(--light);
+	text-shadow: 1px 1px 1rem var(--gray);
 }
 #download_btn
 {
@@ -169,6 +174,7 @@
 	color: var(--light);
 	background: var(--secondary);
 	border-radius: 2rem;
+	transition: all 0.5s linear;
 }
 .feature_btn:hover
 {
@@ -176,7 +182,11 @@
 }
 .feature_btn:hover .bi
 {
+	left: -3.3rem;
 	text-shadow: none;
+	font-size: 1.5em;
+	background: var(--black);
+	border-radius: 10px;
 }
 /*
 	unquie_password_generator css ------------------------------
@@ -227,6 +237,42 @@
 /*
 	secure password validation css -----------------------------
 */
+#secure_password_validation
+{
+	min-height: 90vh;
+}
+#secure_password_validation .icon
+{
+	display: inline-block;
+	padding: 1rem !important;
+	font-size: 3em;
+	color: var(--black);
+	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
+	border-radius: 1rem;
+}
+#secure_password_fld
+{
+	padding: 1rem;
+}
+#secure_password_btn
+{
+	display: inline-block;
+	margin: 1rem auto;
+	padding: 1rem 2rem;
+}
+#secure_password_btn .bi
+{
+	color:var(--light);
+}
+#secure_password_btn:hover
+{
+	background: linear-gradient(60deg,var(--primary),var(--secondary)) !important;
+	border: none;
+}
+#validation .bi-shield-lock
+{
+	font-size: 1.2em;
+}
 /*
 	data cryptography css --------------------------------------
 */
@@ -237,7 +283,18 @@
 #footer a
 {
 	text-decoration: none;	
+	font-size: large;
 }
+#footer .ent
+{
+	font-size: large;
+	font-weight: bold;
+	color: var(--primary);
+}
+/* section:not(#landing)
+{
+	display: none;
+} */
 /*
     ============================================================
 */
