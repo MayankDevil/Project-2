@@ -122,7 +122,7 @@
                             <!-- ( set key length field ) -->
                             <label for="key_length" class="d-flex align-items-center justify-content-between pl-2 my-5 border-bottom">
 
-                                <input type="number" min="4" max="30" placeholder="between{4-30}" class="p-2 w-25" id="key_length"> SET LENGTH  
+                                <input type="number" min="4" max="30" placeholder="[4-30]" class="p-2 w-25" id="key_length"> SET LENGTH  
 
                                 <button class="copy p-3"> <span class="bi bi-files"></span> copy </button>
                             
@@ -211,7 +211,42 @@
             [ data cryptography section ] ----------------------------------------------------
             =============================
         -->
-        <section class="" id="data_crypto"> 
+        <section class="" id="data_crypto">
+            <div class="container">
+                <div class="row">
+                    <!-- { io field } -->
+                    <div class="col-12">
+
+                        <div class="display-3 my-5 py-5"> <span class="bi bi-database-fill-lock icon"></span> Data CryptoGraphy </div>
+
+                        <div class="lead text-muted m-3 my-5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis, sequi est nihil exercitationem veniam facilis sint? Temporibus voluptas porro fugiat. </div>
+
+                        <div  class="" id="data_io">
+                            <!-- ( data input field ) -->
+                            <textarea name="data_input_fld" id="data_input_fld" class="form-control isActiveField" placeholder="write data for encryption"></textarea>
+                            <!-- ( data output field ) -->
+                            <textarea name="data_output_fld" id="data_output_fld" class="form-control" placeholder="decryption data"></textarea>
+                        
+                        </div>
+                    
+                    </div>
+                    <!-- { crypto key field } -->
+                    <div class="col-12">
+
+                        <input type="text" name="crypto_key_fld" class="form-control" id="crypto_key_fld" placeholder="input OR generat Crypto Key">
+                        
+                    </div>
+                    <!-- { operation field } -->
+                    <div class="col-12">
+                        
+                        <button id="crypto_key_btn"> Generator Crypto Key </button>
+
+                        <button class="btn btn-outline-dark" id="decode_btn"> EnCode Data </button>
+
+                    </div>
+                    
+                </div>                
+            </div> 
         </section>
         <!--
             ==================
