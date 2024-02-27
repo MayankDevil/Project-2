@@ -276,7 +276,67 @@
 /*
 	data cryptography css --------------------------------------
 */
-
+#data_crypto .display-3
+{
+	color:var(--bs-gray);
+	text-shadow: 5px 10px 15px var(--gray) !important;
+}
+#data_crypto .icon
+{
+	display: inline-block;
+	padding: 1rem !important;
+	font-size: 1em;
+	color: var(--black);
+	background: linear-gradient(260deg,var(--primary),var(--secondary),var(--shade));
+	border-radius: 0 1rem 1rem 0;
+}
+#data_io
+{
+	position: relative;
+	min-height: 80vh;
+	padding:1rem;
+	border-right: 1px solid var(--bs-secondary);
+}
+#data_input_fld
+{
+	position: absolute;
+	z-index: 10;
+	top:15%;
+	left:15%;
+	min-height: 60vh;
+	width:80%;
+	resize: vertical;
+	padding: 1rem;
+	background: var(--white);
+}
+#data_output_fld
+{
+	position: absolute;
+	z-index: 5;
+	min-height: 60vh;
+	width: 80%;
+	resize: vertical;
+	padding: 1rem;
+	background: var(--light);
+}
+#crypto_key_fld
+{
+	width: 80%;
+	margin: 0 auto 2rem auto;
+	padding:0.5rem;
+}
+.btn
+{
+	padding: 10px 20px;
+}
+.isActiveField
+{
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
 /*
 	footer css -------------------------------------------------
 */
@@ -354,6 +414,16 @@
 	#unique_password_generator .row > div:last-child
 	{
 		padding: 3rem !important;
+	}
+
+	#data_io
+	{
+		min-height: 75vh;
+	}
+	#data_input_fld
+	{
+		top:10%;
+		left:15%;
 	}
 }
 /*
