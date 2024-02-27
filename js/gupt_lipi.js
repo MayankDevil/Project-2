@@ -42,6 +42,77 @@ try
     
     isSymbol = false
 
+    /*
+        --------------------------------------------------------------------------------
+        } random function : return random number between pass arugment range
+        --------------------------------------------------------------------------------
+    */
+
+    function random(range)
+    {        
+        return Math.floor(Math.random() * range)
+    }
+    
+    /*
+        --------------------------------------------------------------------------------
+        } getRandom function : return random_index_data by pass argument data object
+        --------------------------------------------------------------------------------
+    */
+    
+    function getRandom(data)
+    {
+        return data[random(data.length)]
+    }
+
+    /*
+        -----------------------------------------------------------------
+        | enCode function : argument data OR key to return encode data  |
+        -----------------------------------------------------------------
+    */
+        
+    function enCode(data, key)
+    {
+        data = data.split('')
+        
+        for (o = 0; o < data.length; o++)
+        {
+            for (i = 0; i < key.length; i++)
+            {
+                if (shuffle_key[i] == data[o])
+                {
+                    data[o] = key[i]
+                    
+                    break
+                }         
+            }   
+        }
+        return data.join('')
+    }
+
+    /*
+        -----------------------------------------------------------------
+        | deCode function : argument data OR key to return decode data  |
+        -----------------------------------------------------------------
+    */
+    
+    function deCode(data, key)
+    {
+        data = data.split('')
+        
+        for (o = 0; o < data.length; o++)
+        {
+            for (i = 0; i < key.length; i++)
+            {
+                if (data[o] == key[i])
+                {
+                    data[o] = shuffle_key[i]
+                    break
+                }                
+            }   
+        }
+        return data.join('')
+    }
+
     document.title = `Mayank & HRitik`
 }
 catch(error)

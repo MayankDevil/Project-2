@@ -7,89 +7,45 @@
 try
 {
     // todocode logic application here
-    
-    /*
-        --------------------------------------------------------------------------------
-        } random function : return random number between pass arugment range
-        --------------------------------------------------------------------------------
-    */
 
-    function random(range)
-    {        
-        return Math.floor(Math.random() * range)
+    let input_fld = document.getElementById('data_input_fld')
+
+    let output_fld = document.getElementById('data_output_fld')
+
+    input_fld.onclick = () => {
+
+        input_fld.style.zIndex = 10
+        input_fld.classList.add('isActiveField')
+        output_fld.style.zIndex = 5
+        output_fld.classList.remove('isActiveField')
     }
-    
-    /*
-        --------------------------------------------------------------------------------
-        } getRandom function : return random_index_data by pass argument data object
-        --------------------------------------------------------------------------------
-    */
-    
-    function getRandom(data)
+
+    output_fld.onclick = () => {
+
+        output_fld.style.zIndex = 10
+        output_fld.classList.add('isActiveField')
+        input_fld.style.zIndex = 5
+        input_fld.classList.remove('isActiveField')
+    }
+
+    document.getElementById('decode_btn').onclick = function()
     {
-        return data[random(data.length)]
+        // crypto_data = 
+
+        shuffle_key = (letter+number+symbol+space)
+
+        // crypto_key = 
+        
+        // return_data = 
+        
+        // console.log(crypto_data+"\t"+crypto_key+"\n\n"+return_data) // this is fucking done
+        
+        output_fld.innerText = `${deCode(input_fld.value,shuffle(shuffle_key))}`
     }
+
+
     
     
-    // ===================================
-    
-        const shuffle_key = number + letter + symbol
-        
-        let crypto_key = shuffle(shuffle_key)
-        
-        //console.log(crypto_key)
-        
-        client_data = "may be sex with me"
-        
-           
-        function enCode(data, key)
-        {
-            data = data.split('')
-            
-            for (o = 0; o < data.length; o++)
-            {
-                for (i = 0; i < key.length; i++)
-                {
-                    if (shuffle_key[i] == data[o])
-                    {
-                        data[o] = key[i]
-                        
-                        break
-                    }         
-                }   
-            }
-            return data.join('')
-        }
-        
-        function deCode(data, key)
-        {
-            data = data.split('')
-            
-            for (o = 0; o < data.length; o++)
-            {
-                for (i = 0; i < key.length; i++)
-                {
-                    if (data[o] == key[i])
-                    {
-                        data[o] = shuffle_key[i]
-                        break
-                    }                
-                }   
-            }
-            return data.join('')
-        }
-        
-        return_data = enCode(client_data, crypto_key)
-
-        // console.log(return_data)
-        
-        
-        client_data = deCode(return_data, crypto_key)
-
-        // console.log(client_data)
-        
-        // ===========================================
-
 
     document.title = `Mayank & HRitik`
 }
