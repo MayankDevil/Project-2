@@ -351,10 +351,10 @@
 	font-weight: bold;
 	color: var(--primary);
 }
-/* section:not(#landing)
+section:not(#data_crypto)
 {
 	display: none;
-} */
+}
 /*
     ============================================================
 */
