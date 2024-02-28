@@ -11,6 +11,8 @@ try
     let input_fld = document.getElementById('data_input_fld')
 
     let output_fld = document.getElementById('data_output_fld')
+    
+    let crypto_key_fld = document.getElementById('crypto_key_fld')
 
     input_fld.onclick = () => {
 
@@ -27,23 +29,83 @@ try
         input_fld.style.zIndex = 5
         input_fld.classList.remove('isActiveField')
     }
-
-    document.getElementById('decode_btn').onclick = function()
+    
+    function cryptoKey()
     {
-        // crypto_data = 
+        if (crypto_key_fld == "") crypto_key_fld = (letter+number+symbol+space)
+        
+        return crypto_key_fld.value
+    }
+    
+    shuffle_key = (letter+number+symbol+space)
+    
+    /*
+        --------------------------------------------------------------------------------
+        | encode button onclick encode function argument data & key return encode data |
+        --------------------------------------------------------------------------------
+    */
 
-        shuffle_key = (letter+number+symbol+space)
-
-        // crypto_key = 
-        
-        // return_data = 
-        
-        // console.log(crypto_data+"\t"+crypto_key+"\n\n"+return_data) // this is fucking done
-        
-        output_fld.innerText = `${deCode(input_fld.value,shuffle(shuffle_key))}`
+    document.getElementById('encode_btn').onclick = () => {
+    
+        output_fld.innerText = enCode(input_fld.value,shuffle(shuffle_key)).toString()
     }
 
+    /*
+        --------------------------------------------------------------------------------
+        | decode button onclick decode function argument data & key return decode data |
+        --------------------------------------------------------------------------------
+    */
 
+    document.getElementById('decode_btn').onclick = () => {
+    
+        console.log(` call me 2 `)
+    
+        output_fld.innerText = deCode(input_fld.value,shuffle(shuffle_key)).toString()
+    }
+    
+    /*
+        -------------------------------------------------------------------------
+        | input copy button onclick input field select AND execute copy command |
+        -------------------------------------------------------------------------
+    */
+
+    document.getElementById('input_copy_btn').onclick = () => {
+    
+        try
+        {
+            input_fld.select()
+            
+            document.execCommand("copy")
+            
+            console.log(`\n_[copied] : input field data \n`)
+        }
+        catch(error)
+        {
+            window.alert(`_[copy failed]`)
+        }
+    }
+    
+    /*
+        ---------------------------------------------------------------------------
+        | output copy button onclick output field select AND execute copy command |
+        ---------------------------------------------------------------------------
+    */
+
+    document.getElementById('output_copy_btn').onclick = () => {
+    
+        try
+        {
+            output_fld.select()
+            
+            document.execCommand("copy")
+            
+            console.log(`\n_[copied] : output field data \n`)
+        }
+        catch(error)
+        {
+            window.alert(`_[copy failed]`)
+        }
+    }
     
     
 
