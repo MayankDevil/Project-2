@@ -124,7 +124,7 @@
 
                                 <input type="number" min="4" max="30" placeholder="[4-30]" class="p-2 w-25" id="key_length"> SET LENGTH  
 
-                                <button class="copy p-3"> <span class="bi bi-files"></span> copy </button>
+                                <button class="copy p-3" id="copy_password_btn"> <span class="bi bi-files"></span> copy </button>
                             
                             </label>
                         
@@ -136,7 +136,7 @@
                                 <div class="form-check py-3 px-3 d-block border border-dark rounded">
                     
                                     <input class="form-check-input" type="checkbox" name="num" id="number_check" value="1">
-                                    <label class="form-check-label" for="number_check" class=""> include Number in password </label>
+                                    <label class="form-check-label" for="number_check" class=""> remove Number between password </label>
                     
                                 </div>
                             </div>
@@ -145,7 +145,7 @@
                                 <div class="form-check py-3 px-3 d-block border border-dark rounded">
 
                                     <input class="form-check-input" type="checkbox" name="sym" id="symbol_check" value="1" > 
-                                    <label class="form-check-label" for="symbol_check"> include Symbol in password </label>
+                                    <label class="form-check-label" for="symbol_check"> remove Symbol between password </label>
 
                                 </div>
                             </div>
@@ -237,9 +237,11 @@
                         
                     </div>
                     <!-- { operation field } -->
-                    <div class="col-12">
+                    <div class="col-12 py-5">
                         
-                        <button id="crypto_key_btn"> Generator Crypto Key </button>
+                        <button class="btn btn-outline-dark" id="crypto_key_btn"> Generator Crypto Key </button>
+
+                        <button class="btn btn-outline-dark" id="key_copy_btn"> Copy Crypto Key </button>
 
                         <button class="btn btn-outline-dark" id="encode_btn"> EnCode Data </button>
                         
@@ -259,10 +261,16 @@
             [ footer section ] ---------------------------------------------------
             ==================
         -->
-        <footer class="" id="footer">
+        <footer class="bg-light" id="footer">
             <div class="container">
 
-                <h6 class="py-5 p-1"> CopyRight <span class="ent">&copy;</span> Designed | Developed by <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a> </h6>
+                <h6 class="py-5 p-1">
+                    
+                    CopyRight <span class="ent">&copy;</span> Designed | Developed by 
+                    
+                    <a href="https://github.com/MayankDevil/ " title="MayankDevil"> Mayank </a> &nbsp;&&nbsp; <a href="https://github.com/Hritikkumar975/" title="HRitik"> HRitik </a>
+                
+                </h6>
                 
             </div>
         </footer>
