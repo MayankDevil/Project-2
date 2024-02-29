@@ -32,15 +32,9 @@ try
     
     space = ' '
 
-    // [ require ] -----
+    // [ shuffle_key ] -----
 
-    unique_code = null
-
-    character_set = null
-
-    isNumber = false 
-    
-    isSymbol = false
+    shuffle_key = (letter+number+space+symbol)
 
     /*
         --------------------------------------------------------------------------------
@@ -86,7 +80,7 @@ try
                 }         
             }   
         }
-        return data.join('')
+        return data.join('').toString()
     }
 
     /*
@@ -106,11 +100,12 @@ try
                 if (data[o] == key[i])
                 {
                     data[o] = shuffle_key[i]
+                    
                     break
                 }                
             }   
         }
-        return data.join('')
+        return data.join('').toString()
     }
 
     document.title = `Mayank & HRitik`
