@@ -18,11 +18,22 @@ try
 
     let unique_password_btn = document.getElementById("unique_password_btn")
 
+    let copy_password_btn = document.getElementById('copy_password_btn')
+
     let number_check = document.getElementById('number_check')
 
     let symbol_check = document.getElementById('symbol_check')
     
+    unique_code = null
+
+    character_set = null
+
+    isNumber = false 
+    
+    isSymbol = false
+
     key_length.value = 8 // default legnth
+
 
     /*
         ------------------------------------------------------------------------------
@@ -96,6 +107,28 @@ try
             unique_code += getRandom(character_set)
         }
         unique_password_fld.value = unique_code
+
+        copy_password_btn.innerHTML = '<span class="bi bi-files"></span> copy'
+    }
+
+    
+    
+    copy_password_btn.onclick = (event) => {
+
+        try
+        {
+            unique_password_fld.select()
+            
+            document.execCommand("copy")
+
+            copy_password_btn.innerHTML = '<span class="bi bi-check"></span> copied'
+            
+            console.log(`\n_[copied] : unique password \n`)
+        }
+        catch(error)
+        {
+            window.alert(`_[copy failed]`)
+        }
     }
 
     document.title = `Mayank & HRitik`

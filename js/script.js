@@ -14,6 +14,8 @@ try
     
     let crypto_key_fld = document.getElementById('crypto_key_fld')
 
+    let crypto_key_btn = document.getElementById('crypto_key_btn')
+
     input_fld.onclick = () => {
 
         input_fld.style.zIndex = 10
@@ -30,15 +32,30 @@ try
         input_fld.classList.remove('isActiveField')
     }
     
-    function cryptoKey()
+    /*
+        --------------------------------------------------------------------------------
+        | cyrpto key button onclick set field value shuffled character_set data        |
+        --------------------------------------------------------------------------------
+    */
+    
+    crypto_key_btn.onclick = function()
     {
-        if (crypto_key_fld == "") crypto_key_fld = (letter+number+symbol+space)
+        crypto_key_fld.value = shuffle(letter+number+space+symbol).toString()
         
-        return crypto_key_fld.value
+        console.log(`\n_[success] : cyrpto key generated`)
     }
+
+    /*
+        --------------------------------------------------------------------------------
+        } getCryptoKey function : return crypto key as stirng
+        --------------------------------------------------------------------------------
+    */
     
-    shuffle_key = (letter+number+symbol+space)
-    
+    function getCryptoKey()
+    {
+        return crypto_key_fld.value.toString()
+    }
+
     /*
         --------------------------------------------------------------------------------
         | encode button onclick encode function argument data & key return encode data |
@@ -47,7 +64,7 @@ try
 
     document.getElementById('encode_btn').onclick = () => {
     
-        output_fld.innerText = enCode(input_fld.value,shuffle(shuffle_key)).toString()
+        output_fld.innerText = enCode(input_fld.value,getCryptoKey())
     }
 
     /*
@@ -58,9 +75,7 @@ try
 
     document.getElementById('decode_btn').onclick = () => {
     
-        console.log(` call me 2 `)
-    
-        output_fld.innerText = deCode(input_fld.value,shuffle(shuffle_key)).toString()
+        output_fld.innerText = deCode(input_fld.value,getCryptoKey())
     }
     
     /*
@@ -74,9 +89,8 @@ try
         try
         {
             input_fld.select()
-            
             document.execCommand("copy")
-            
+
             console.log(`\n_[copied] : input field data \n`)
         }
         catch(error)
@@ -96,9 +110,8 @@ try
         try
         {
             output_fld.select()
-            
             document.execCommand("copy")
-            
+
             console.log(`\n_[copied] : output field data \n`)
         }
         catch(error)
@@ -106,8 +119,42 @@ try
             window.alert(`_[copy failed]`)
         }
     }
+
+    /*
+        ---------------------------------------------------------------------------
+        | output copy button onclick output field select AND execute copy command |
+        ---------------------------------------------------------------------------
+    */
+
+    document.getElementById('key_copy_btn').onclick = () => {
+
+        try
+        {
+            crypto_key_fld.select()
+            document.execCommand("copy")
+
+            console.log(`\n_[copied] : cryptography key \n`)
+        }
+        catch(error)
+        {
+            window.alert(`_[copy failed]`)
+        }
+    }
+
     
-    
+    /*// write to speach ------------------------------------------------------------
+
+    console.log(`
+        \n G G G G G   U       U   P P P P   T T T T T
+        \n G           U       U   P     P       T    
+        \n G           U       U   P     P       T    
+        \n G   G G G   U       U   P P P P       T    
+        \n G       G   U       U   P             T    
+        \n G       G   U       U   P             T    
+        \n G G G G G   U U U U U   P             T     \n
+        \n Copyriht & Designed | Developed by Mayank & HRitik \n
+    `)
+    */
 
     document.title = `Mayank & HRitik`
 }
