@@ -64,7 +64,9 @@ try
 
     document.getElementById('encode_btn').onclick = () => {
     
-        output_fld.innerText = enCode(input_fld.value,getCryptoKey())
+        output_fld.value = enCode(input_fld.value,getCryptoKey()).toString()
+        
+        console.log(`_[data encoded]`)
     }
 
     /*
@@ -75,7 +77,26 @@ try
 
     document.getElementById('decode_btn').onclick = () => {
     
-        output_fld.innerText = deCode(input_fld.value,getCryptoKey())
+        output_fld.value = deCode(input_fld.value,getCryptoKey()).toString()
+        
+        console.log(`_[data decoded]`)
+    }
+    
+    /*
+        -------------------------------------
+        | all clear button clear all field  |
+        -------------------------------------
+    */
+
+    document.getElementById('all_clear').onclick = () => {
+    
+        input_fld.value = ``
+        
+        output_fld.value = ``
+        
+        crypto_key_fld.value = ``
+        
+        console.log(`_[all clear]`)
     }
     
     /*
@@ -142,7 +163,8 @@ try
     }
 
     
-    /*// write to speach ------------------------------------------------------------
+    /*
+    // write to speach ------------------------------------------------------------
 
     console.log(`
         \n G G G G G   U       U   P P P P   T T T T T
