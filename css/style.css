@@ -176,6 +176,10 @@
 	border-radius: 2rem;
 	transition: all 0.5s linear;
 }
+.feature_btn
+{
+    color:var(--dark) !important;
+}
 .feature_btn:hover
 {
 	text-shadow: 3px 3px 5px var(--gray);
@@ -362,6 +366,26 @@
 	color: var(--black);
 	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
 	border-radius: 1rem;
+}
+/*
+    about css --------------------------------------
+*/
+#about
+{
+    background:linear-gradient(var(--light),var(--white));
+}
+#about .developer_pic
+{
+    height:300px;
+    width:300px;
+    margin:auto;
+    object-fit:cover;
+    clip-path:circle(50% at 50% 50%);
+}
+#about .developer_pic:hover
+{
+    transition:transform 0.5s linear;
+    transform:rotate(360deg) scale(1.1);
 }
 /*
 	footer css -------------------------------------------------
