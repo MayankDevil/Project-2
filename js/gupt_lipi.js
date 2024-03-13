@@ -80,7 +80,7 @@ try
                 }         
             }   
         }
-        return data.join('').toString()
+        return data.join('')
     }
 
     /*
@@ -105,8 +105,9 @@ try
                 }                
             }   
         }
-        return data.join('').toString()
+        return data.join('')
     }
+    
 
     document.title = `Mayank & HRitik`
 }
