@@ -32,7 +32,7 @@ try
 
         if (secure_password_fld.value == '')
         {
-            secure_alert.innerHTML = `<div class="isUnvalid"> Please! Enter Password </div>`
+            secure_alert.innerHTML = `<div> <div class="isUnvalid"> Please! Enter Password </div> </div>`
 
             secure_alert.classList.add('isUnvalid')
         }
@@ -72,33 +72,37 @@ try
             }
             if (true)
             {
-                secure += random(20)
+                secure += random(5)
             }
-
-            switch(parseInt(secure))
+            if (secure_password_fld.value.length >= 8)
             {
-                case 100:
-                    alert_statement += `<div class='isValid alert alert-succes'> Very Good Password <div>`
-                    break;
-                case 80 :
-                    alert_statement += `<div class='isValid alert alert-success'> Your password Security Level is very High <div>`
-                    break;
-                case 60 :
-                    alert_statement += `<div class='isValid alert alert-info'> Your password Level is Secure, Nice! <div>`
-                    break;
-                case 40 :
-                    alert_statement += `<div class='isValid alert alert-primary'> Password is Weak <div>`
-                    break;    
-                case 20 :
-                    alert_statement += `<div class='isUnvalid alert alert-warning'> Require better password <div>`
-                    break;
-                default :
-                    alert_statement += `<div class='isUnvalid alert alert-danger'> Your security in Danger <div>` 
+                secure += 5
             }
-
-            secure_alert.innerHTML = `<div class="h4 text-center py-3"> <span class="bi bi-shield-lock"></span> Your Password is ${secure}% secure </div> ${alert_statement} `
-
-            console.log((secure_password_fld.value.match(/[a-zA-Z]/g) || []).length + secure_password_fld.value.length)
+            if (secure_password_fld.value.length > 14)
+            {
+                secure += 5
+            }
+            if (secure_password_fld.value.length > 21)
+            {
+                secure += 5
+            }
+            else
+            {
+                alert_statement += `<div class="h5 text-end py-2"> _More length password </div>`
+            }
+            
+            secure_alert.innerHTML = ``
+            
+            secure_alert.classList.remove('isUnvalid')
+            
+            if (secure > 50)
+            {
+                secure_alert.innerHTML = `<div class="h4 text-center py-3 isValid"> <span class="bi bi-shield-lock"></span> Your Password is ${secure}% secure </div> ${alert_statement} `
+            }
+            else
+            {
+                secure_alert.innerHTML = `<div class="h4 text-center py-3 isUnvalid"> <span class="bi bi-shield-lock"></span> Your Password is ${secure}% secure </div> ${alert_statement} `
+            }
         }
         console.log(secure_password_fld.value)
     }
