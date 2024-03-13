@@ -104,6 +104,21 @@
 /*
 	header css -------------------------------------------------
 */
+#header
+{
+    position:fixed;
+    z-index:5;
+    top:0;
+    width:100%;
+    height:5vh;
+    background:linear-gradient(to top, transparent,var(--light));
+}
+#header a
+{
+    display:block;
+    height:5vh;
+    background:transparent;
+}
 /*
 	landing page css -------------------------------------------
 */
