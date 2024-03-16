@@ -36,6 +36,12 @@ try
 
             secure_alert.classList.add('isUnvalid')
         }
+        else if (/[ ]/.test(secure_password_fld.value))
+        {
+            secure_alert.innerHTML = `<div> <div class="isUnvalid"> _Space_ Not Allowed </div> </div>`
+
+            secure_alert.classList.add('isUnvalid')
+        }
         else
         {
             if (/[A-Z]/.test(secure_password_fld.value))
@@ -104,7 +110,7 @@ try
                 secure_alert.innerHTML = `<div class="h4 text-center py-3 isUnvalid"> <span class="bi bi-shield-lock"></span> Your Password is ${secure}% secure </div> ${alert_statement} `
             }
         }
-        console.log(secure_password_fld.value)
+        console.log(`this ${secure_password_fld.value} level is ${secure}% secure`)
     }
 
     document.title = `Mayank & HRitik`
