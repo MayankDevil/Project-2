@@ -373,6 +373,7 @@
 #instruction #step > li::after
 {
     content : '.';
+    font-weight:bolder;
     color:var(--primary);
 }
 #about .icon
