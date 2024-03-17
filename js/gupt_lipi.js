@@ -2,7 +2,7 @@
 -   Project-2 "GUPT"
 -   Designed | Developed by Mayank & HRitik
 -   Copyright by Mayank( https://github.com/MayankDevil/ ) & HRitik ( https://github.com/Hritikkumar975/ )
--   JavaScript : ./js/entity.js
+-   JavaScript : ./js/gupt_lipi.js
 */
 try
 {
@@ -88,7 +88,7 @@ try
         ====================
     */
 
-    function encrypt(data)
+    function encrypt(data, key)
     {
         const data_set = data.split('')
         
@@ -140,7 +140,15 @@ try
             }
             */
         }
-        return data_set.join('');
+
+        if (isEmpty(key))
+        {
+            return data_set.join('');
+        }
+        else
+        {
+            return enCode(data_set.join(''), key).toString()
+        }
     }
 
     /*
@@ -149,8 +157,13 @@ try
         ====================
     */
 
-    function decrypt(data)
+    function decrypt(data, key)
     {
+        if (!isEmpty(key))
+        {
+            data = deCode(data, key).toString()
+        }
+
         const data_set = data.split('')
         
         for (let i = 0; i < data_set.length; i++)
