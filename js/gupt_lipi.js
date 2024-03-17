@@ -26,7 +26,7 @@ try
 
     number = "0123456789"
 
-    symbol = "`~!@#$%^&*()-_+={}:<>?[],.;\|/"
+    symbol = "!@#$%^&*()_+-=[]{};:'\"\\|,<.>/?`~"
 
     letter = capital_letter + capital_letter.toLowerCase()
     
@@ -37,25 +37,169 @@ try
     shuffle_key = (letter+number+space+symbol)
 
     /*
-        --------------------------------------------------------------------------------
-        } random function : return random number between pass arugment range
-        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------
+        | setData function : get character or iterate argument to return set_character_iterate |
+        ----------------------------------------------------------------------------------------
     */
 
-    function random(range)
-    {        
-        return Math.floor(Math.random() * range)
-    }
-    
-    /*
-        --------------------------------------------------------------------------------
-        } getRandom function : return random_index_data by pass argument data object
-        --------------------------------------------------------------------------------
-    */
-    
-    function getRandom(data)
+    function setData(character, iterate)
     {
-        return data[random(data.length)]
+        if (isLetter(character))
+        {
+            let code = character.charCodeAt(0)
+            
+            if (isUpper(code))
+            {
+                character_code = (((code - 65 + iterate) % 26 + 26) % 26 + 65)
+            }
+            else if (isLower(code))
+            {
+                character_code = (((code - 97 + iterate) % 26 + 26) % 26 + 97)
+                
+            }         
+            return String.fromCharCode(character_code)
+        }
+        else if (isNumber(character))
+        {
+            let number = character.charCodeAt(0)
+            
+            number = (((number - 48 + iterate) % 10 + 10) % 10 + 48)
+            
+            return String.fromCharCode(number) 
+        }
+        else if (isSymbol(character))
+        {
+            let character_index = symbol.indexOf(character)
+            
+            let set_character_index = (character_index + iterate) % symbol.length
+            
+            if (!isReal(set_character_index))
+            {
+                set_character_index = 0 
+            }
+            
+            return symbol[set_character_index]
+        }
+    }
+
+    /*
+        ====================
+        | encrypt function |
+        ====================
+    */
+
+    function encrypt(data)
+    {
+        const data_set = data.split('')
+        
+        for (let i = 0; i < data_set.length; i++)
+        {
+            let character = data_set[i]
+            
+            if (isLetter(character))
+            {
+                if (character.charCodeAt(0) === 90 || character.charCodeAt(0) === 122)
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 26)
+                }
+                else
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 1)                 
+                }
+                if ((i%2) != 0)
+                {                               
+                    let transform_character = data_set[i]
+                                    
+                    if (isUpper(transform_character.charCodeAt(0)))
+                    {
+                        data_set[i] = transform_character.toLowerCase()
+                    }
+                    else if (isLower(transform_character.charCodeAt(0)))
+                    {
+                        data_set[i] = transform_character.toUpperCase()
+                    }
+                }
+            }
+            else if (isNumber(character))
+            {
+                if (character.charCodeAt(0) === 48)
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 9)
+                }
+                else
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 1)                 
+                }
+            }
+            
+            // console.log(data_set[i])
+            /*
+            if (isPrime(i))
+            {            
+                data_set[i] = setData(character, getPrimeIndex(i))
+            }
+            */
+        }
+        return data_set.join('');
+    }
+
+    /*
+        ====================
+        | decrypt function |
+        ====================
+    */
+
+    function decrypt(data)
+    {
+        const data_set = data.split('')
+        
+        for (let i = 0; i < data_set.length; i++)
+        {
+            character = data_set[i]
+            
+            /*if (isPrime(i))
+            {            
+                data_set[i] = setData(character, getPrimeIndex(i))
+            }*/
+                
+            if (isLetter(character))
+            {
+                if (character.charCodeAt(0) === 65 || character.charCodeAt(0) === 97)
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 26)
+                }
+                else
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 1)                 
+                }
+                
+                if ((i%2) != 0)
+                {
+                    let transform_character = data_set[i]
+                    
+                    if (isUpper(transform_character.charCodeAt(0)))
+                    {
+                        data_set[i] = transform_character.toLowerCase()
+                    }
+                    else if (isLower(transform_character.charCodeAt(0)))
+                    {
+                        data_set[i] = transform_character.toUpperCase()
+                    }
+                }
+            }
+            else if (isNumber(character))
+            {
+                if (character.charCodeAt(0) === 57)
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 9)
+                }
+                else
+                {
+                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 1)                 
+                }
+            }
+        }
+        return data_set.join('');
     }
 
     /*
@@ -107,7 +251,6 @@ try
         }
         return data.join('')
     }
-    
 
     document.title = `Mayank & HRitik`
 }
