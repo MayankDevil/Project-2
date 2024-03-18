@@ -186,6 +186,12 @@ try
         }
     }
     
+    /*
+        ------------------------------------------------------
+        | language button onclick if is hindi set innerHTML  |
+        ------------------------------------------------------
+    */
+    
     document.getElementById('lang_btn').onclick = () => {
     
         if (isHindi)
@@ -219,20 +225,18 @@ try
         
         step.innerHTML = rule.toString()
         
-        console.log("\n _[language = Hindi]")
+        console.log(`\n _[language is Hindi : ${isHindi}]`)
     }
 
     
     // write to speach ------------------------------------------------------------
     
     console.log(`
-        \n G G G G G   U       U   P P P P   T T T T T
-        \n G           U       U   P     P       T    
-        \n G           U       U   P     P       T    
-        \n G   G G G   U       U   P P P P       T    
-        \n G       G   U       U   P             T    
-        \n G       G   U       U   P             T    
-        \n G G G G G   U U U U U   P             T     \n
+        \n G G G G   U     U   P P P P  T T T T T 
+        \n G         U     U   P     P      T        
+        \n G   G G   U     U   P P P P      T    
+        \n G     G   U     U   P            T        
+        \n G G G G   U U U U   P            T     \n
         \n Copyright & Designed | Developed by Mayank & HRitik \n
     `)
 
