@@ -271,7 +271,7 @@ try
         -------------------------------------------------------------
     */
     
-    function engput(data)
+    function engupt(data)
     {
         let output = '';
 
@@ -287,7 +287,7 @@ try
         -------------------------------------------------------------
     */
     
-    function degput(data)
+    function degupt(data)
     {
         let output = '';
 
