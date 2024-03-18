@@ -28,9 +28,9 @@ try
 
     character_set = null
 
-    isNumber = false 
+    hasNumber = false 
     
-    isSymbol = false
+    hasSymbol = false
 
     key_length.value = 8 // default legnth
 
@@ -67,7 +67,9 @@ try
 
     number_check.onchange = () => {
 
-        isNumber = (isNumber)? false : true;
+        hasNumber = (hasNumber)? false : true;
+        
+        console.log(`\n _[has Number : ${hasNumber}]`)
     }
 
     /*
@@ -78,7 +80,9 @@ try
 
     symbol_check.onchange = () => {
 
-        isSymbol = (isSymbol)? false : true;
+        hasSymbol = (hasSymbol)? false : true;
+        
+        console.log(`\n _[has Number : ${hasSymbol}]`)
     }
 
     /*
@@ -93,11 +97,11 @@ try
 
         character_set = letter
             
-        if (isNumber)
+        if (hasNumber)
         {
             character_set += number
         }
-        if (isSymbol)
+        if (hasSymbol)
         {
             character_set += symbol;
         }
@@ -109,9 +113,15 @@ try
         unique_password_fld.value = unique_code
 
         copy_password_btn.innerHTML = '<span class="bi bi-files"></span> copy'
+        
+        console.log(`\n_[generated : unique password]`)
     }
 
-    
+    /*
+        -----------------------------------------------------------------
+        | copy password button onclick copy unique password field value |
+        -----------------------------------------------------------------
+    */
     
     copy_password_btn.onclick = (event) => {
 
