@@ -223,9 +223,8 @@ try
     }
 
     
-    /*
     // write to speach ------------------------------------------------------------
-
+    
     console.log(`
         \n G G G G G   U       U   P P P P   T T T T T
         \n G           U       U   P     P       T    
@@ -234,9 +233,8 @@ try
         \n G       G   U       U   P             T    
         \n G       G   U       U   P             T    
         \n G G G G G   U U U U U   P             T     \n
-        \n Copyriht & Designed | Developed by Mayank & HRitik \n
+        \n Copyright & Designed | Developed by Mayank & HRitik \n
     `)
-    */
 
     document.title = `Mayank & HRitik`
 }
