@@ -264,6 +264,38 @@ try
         }
         return data.join('')
     }
+    
+    /*
+        -------------------------------------------------------------
+        | engupt function argument data to return encrypt gupt data |
+        -------------------------------------------------------------
+    */
+    
+    function engput(data)
+    {
+        let output = '';
+
+        for (let i = 0; i < data.length; i++)
+            output += String.fromCharCode(data[i].charCodeAt(0) << 2)
+        
+        return output;
+    }
+    
+    /*
+        -------------------------------------------------------------
+        | degupt function argument data to return decrypt gupt data |
+        -------------------------------------------------------------
+    */
+    
+    function degput(data)
+    {
+        let output = '';
+
+        for (let i = 0; i < data.length; i++)
+            output += String.fromCharCode(data[i].charCodeAt(0) >> 2)
+        
+        return output;
+    }
 
     document.title = `Mayank & HRitik`
 }
