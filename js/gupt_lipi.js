@@ -24,11 +24,13 @@ try
 
     capital_letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+    small_letter = capital_letter.toLowerCase()
+
     number = "0123456789"
 
     symbol = "!@#$%^&*()_+-=[]{};:'\"\\|,<.>/?`~"
 
-    letter = capital_letter + capital_letter.toLowerCase()
+    letter = capital_letter + small_letter
     
     space = ' '
 
@@ -44,42 +46,21 @@ try
 
     function setData(character, iterate)
     {
-        if (isLetter(character))
+        let ch = character, n = iterate
+        
+        if (isSymbol(ch))
         {
-            let code = character.charCodeAt(0)
-            
-            if (isUpper(code))
-            {
-                character_code = (((code - 65 + iterate) % 26 + 26) % 26 + 65)
-            }
-            else if (isLower(code))
-            {
-                character_code = (((code - 97 + iterate) % 26 + 26) % 26 + 97)
-                
-            }         
-            return String.fromCharCode(character_code)
+            ch = shiftSymbol(ch, n)
         }
-        else if (isNumber(character))
+        else if (isNumber(ch))
         {
-            let number = character.charCodeAt(0)
-            
-            number = (((number - 48 + iterate) % 10 + 10) % 10 + 48)
-            
-            return String.fromCharCode(number) 
+            ch = shiftNumber(ch, n)
         }
-        else if (isSymbol(character))
+        else if (isLetter(ch))
         {
-            let character_index = symbol.indexOf(character)
-            
-            let set_character_index = (character_index + iterate) % symbol.length
-            
-            if (!isReal(set_character_index))
-            {
-                set_character_index = 0 
-            }
-            
-            return symbol[set_character_index]
+            ch = shiftLetter(ch,  n)
         }
+        return ch
     }
 
     /*
@@ -96,49 +77,35 @@ try
         {
             let character = data_set[i]
             
-            if (isLetter(character))
+            if (isSymbol(character))
             {
-                if (character.charCodeAt(0) === 90 || character.charCodeAt(0) === 122)
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 26)
-                }
-                else
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 1)                 
-                }
-                if ((i%2) != 0)
-                {                               
-                    let transform_character = data_set[i]
-                                    
-                    if (isUpper(transform_character.charCodeAt(0)))
-                    {
-                        data_set[i] = transform_character.toLowerCase()
-                    }
-                    else if (isLower(transform_character.charCodeAt(0)))
-                    {
-                        data_set[i] = transform_character.toUpperCase()
-                    }
-                }
+                data_set[i] = shiftSymbol(character,1)
             }
             else if (isNumber(character))
             {
-                if (character.charCodeAt(0) === 48)
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 9)
-                }
-                else
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 1)                 
-                }
+                data_set[i] = shiftNumber(character,-7)
             }
-            
-            // console.log(data_set[i])
-            /*
+            else if (isLetter(character))
+            {
+                data_set[i] = shiftLetter(character,9)
+            }
             if (isPrime(i))
-            {            
-                data_set[i] = setData(character, getPrimeIndex(i))
+            {
+                let n = getPrimeIndex(i)
+
+                if (isSymbol(character))
+                {
+                    character = shiftSymbol(character, n)
+                }
+                else if (isNumber(character))
+                {
+                    character = shiftNumber(character, n)
+                }
+                else if (isLetter(character))
+                {
+                    character = shiftLetter(character, n)
+                }
             }
-            */
         }
 
         if (isEmpty(key))
@@ -169,47 +136,35 @@ try
         for (let i = 0; i < data_set.length; i++)
         {
             character = data_set[i]
-            
-            /*if (isPrime(i))
-            {            
-                data_set[i] = setData(character, getPrimeIndex(i))
-            }*/
                 
-            if (isLetter(character))
+            if (isPrime(i))
             {
-                if (character.charCodeAt(0) === 65 || character.charCodeAt(0) === 97)
+                let n = getPrimeIndex(i)
+
+                if (isSymbol(character))
                 {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 26)
+                    data_set[i] = shiftSymbol(character, n)
                 }
-                else
+                else if (isNumber(character))
                 {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 1)                 
+                    data_set[i] = shiftNumber(character, n)
                 }
-                
-                if ((i%2) != 0)
+                else if (isLetter(character))
                 {
-                    let transform_character = data_set[i]
-                    
-                    if (isUpper(transform_character.charCodeAt(0)))
-                    {
-                        data_set[i] = transform_character.toLowerCase()
-                    }
-                    else if (isLower(transform_character.charCodeAt(0)))
-                    {
-                        data_set[i] = transform_character.toUpperCase()
-                    }
+                    data_set[i] = shiftLetter(character, n)
                 }
+            }
+            if (isSymbol(character))
+            {
+                data_set[i] = shiftSymbol(character,-1)
             }
             else if (isNumber(character))
             {
-                if (character.charCodeAt(0) === 57)
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) - 9)
-                }
-                else
-                {
-                    data_set[i] = String.fromCharCode(character.charCodeAt(0) + 1)                 
-                }
+                data_set[i] = shiftNumber(character, 7)
+            }
+            else if (isLetter(character))
+            {
+                data_set[i] = shiftLetter(character,-9)
             }
         }
         return data_set.join('');
