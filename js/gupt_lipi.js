@@ -84,10 +84,20 @@ try
             else if (isNumber(character))
             {
                 data_set[i] = shiftNumber(character,-7)
+                
+                if (i%9 == 0)
+                {
+                    data_set[i] = shiftLetter(character,-7)
+                }
             }
             else if (isLetter(character))
             {
                 data_set[i] = shiftLetter(character,9)
+                
+                if (i%2 == 0)
+                {
+                    data_set[i] = shiftLetter(character,-3)
+                }
             }
             if (isPrime(i))
             {
@@ -161,10 +171,20 @@ try
             else if (isNumber(character))
             {
                 data_set[i] = shiftNumber(character, 7)
+                
+                if (i%9 == 0)
+                {
+                    data_set[i] = shiftLetter(character, 7)
+                }
             }
             else if (isLetter(character))
             {
                 data_set[i] = shiftLetter(character,-9)
+                
+                if (i%2 == 0)
+                {
+                    data_set[i] = shiftLetter(character,3)
+                }
             }
         }
         return data_set.join('');
