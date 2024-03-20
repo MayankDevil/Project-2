@@ -27,9 +27,9 @@ try
 
     function isLetter(character)
     {
-        return (character >= 'A' && character <= 'Z') || (character >= 'a' && character <= 'z')
+        // return (character >= 'A' && character <= 'Z') || (character >= 'a' && character <= 'z')
     
-        // return /[a-zA-Z]/.test(chracter)
+        return /[a-zA-Z]/.test(character)
     }
 
     /*
@@ -40,9 +40,9 @@ try
 
     function isUpper(character)
     {
-        return (character >= 65 && character <= 90)
+        // return (character >= 65 && character <= 90)
 
-        // return /[A-Z]/.test(chracter)
+        return /[A-Z]/.test(character)
     }
 
     /*
@@ -53,9 +53,9 @@ try
     
     function isLower(character)
     {
-        return (character >= 97 && character <= 122)
+        // return (character >= 97 && character <= 122)
 
-        // return /[a-z]/.test(chracter)
+        return /[a-z]/.test(character)
     }
     
     /*
@@ -90,9 +90,9 @@ try
 
     function isSymbol(character)
     {
-        return character.includes(symbol)
+        // return symbol.includes(character)
         
-        // return /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]$/.test(character)
+        return /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]$/.test(character)
     }
 
     /*
@@ -222,6 +222,76 @@ try
     //  isNaN()      // if isNumber || Convertable inNumber so return false else true
 
     //  isFinite()  // if isNumber || COnvertable inNumber & Finite so return true else false
+
+
+    
+    /*
+        ------------------------------------------------------------------
+        | function argument character AND iterate to return shift number |
+        ------------------------------------------------------------------
+    */
+    
+    function shiftNumber(character, iterate)
+    {
+        if (isReal(iterate))
+        {
+            return number[((number.indexOf(character) + iterate) % number.length)]
+        }
+        else
+        {
+            return number[(number.length + ((number.indexOf(character) + iterate) % number.length)) % number.length]
+        }
+    }
+    
+    /*
+        ------------------------------------------------------------------
+        | function argument character AND iterate to return shift symbol |
+        ------------------------------------------------------------------
+    */
+    
+    function shiftSymbol(character, iterate)
+    {
+        if (isReal(iterate))
+        {
+            return symbol[((symbol.indexOf(character) + iterate) % symbol.length)]
+        }
+        else
+        {
+            return symbol[(symbol.length + ((symbol.indexOf(character) + iterate) % symbol.length)) % symbol.length]
+        }
+    }
+    
+    /*
+        ------------------------------------------------------------------
+        | function argument character AND iterate to return shift letter |
+        ------------------------------------------------------------------
+    */
+    
+    function shiftLetter(character, iterate)
+    {
+        if (isUpper(character))
+        {
+            if (isReal(iterate))
+            {
+                return capital_letter[((capital_letter.indexOf(character) + iterate) % capital_letter.length)]
+            }
+            else
+            {
+                return capital_letter[((capital_letter.length + ((capital_letter.indexOf(character) + iterate) % capital_letter.length)) % capital_letter.length)]
+            }
+        }
+        else if (isLower(character))
+        {
+            if (isReal(iterate))
+            {
+                return small_letter[((small_letter.indexOf(character) + iterate) % small_letter.length)]
+            }
+            else
+            {
+                return small_letter[((small_letter.length + ((small_letter.indexOf(character) + iterate) % small_letter.length)) % small_letter.length)]
+            }        
+        }   
+    }
 
     document.title = `Mayank & HRitik`
 }
