@@ -56,9 +56,7 @@ __This GUPT Project is the property of Mayank & HRitik and is protected under co
 
 For permissions, please contact the repository owners through their GitHub profiles:
 
-- 
-
-[![Mayank](https://img.shields.io/badge/MayankDevil-FF0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MayankDevil/): https://github.com/MayankDevil/
+- [![Mayank](https://img.shields.io/badge/MayankDevil-FF0000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MayankDevil/): https://github.com/MayankDevil/
 
 - [![Hritik](https://img.shields.io/badge/Hritikkumar975-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Hritikkumar975/): https://github.com/Hritikkumar975/
 
