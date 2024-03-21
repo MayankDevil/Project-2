@@ -77,6 +77,21 @@ try
         {
             let character = data_set[i]
             
+            if ((i%7) == 0)
+            {
+                if (isLower(character))
+                {
+                    character = character.toUpperCase()
+                }
+                else if (isUpper(character))
+                {
+                    character = character.toLowerCase()
+                }
+                else if (isNumber(character))
+                {
+                    character = shiftNumber(character, 1)
+                }
+            }
             if (isSymbol(character))
             {
                 data_set[i] = shiftSymbol(character,1)
@@ -146,7 +161,22 @@ try
         for (let i = 0; i < data_set.length; i++)
         {
             character = data_set[i]
-                
+            
+            if ((i%7) == 0)
+            {
+                if (isLower(character))
+                {
+                    character = character.toUpperCase()
+                }
+                else if (isUpper(character))
+                {
+                    character = character.toLowerCase()
+                }
+                else if (isNumber(character))
+                {
+                    character = shiftNumber(character,-1)
+                }
+            }
             if (isPrime(i))
             {
                 let n = getPrimeIndex(i)
