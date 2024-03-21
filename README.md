@@ -48,7 +48,7 @@ _Immerse yourself in the elegance of simplicity with our Light Theme's deliberat
  - [x] Focus on Data Security
 
 
-# Copyright Notice
+### Copyright Notice
 
 Copyright (c) 2024 by _Mayank_ & _HRitik_. All Rights Reserved.                *
 
