@@ -51,6 +51,7 @@
 	--shade:#dff9fb;
     --primary:#dc3545;
     --secondary:#c23616;
+    --levender:#d9deff;
 }
 
 ::-webkit-scrollbar
@@ -361,6 +362,10 @@
 /*
 	instruction css --------------------------------------
 */
+#instruction
+{
+    background: radial-gradient(circle at 100% 50%,var(--levender), transparent, var(--white), var(--light));
+}
 #instruction .bi-file-earmark-text
 {
     font-size:1.1em;
@@ -376,6 +381,13 @@
     font-weight:bolder;
     color:var(--primary);
 }
+/*
+    about css --------------------------------------
+*/
+#about
+{
+    background:linear-gradient(var(--light),var(--white));
+}
 #about .icon
 {
 	display: inline-block;
@@ -384,13 +396,6 @@
 	color: var(--black);
 	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
 	border-radius: 1rem;
-}
-/*
-    about css --------------------------------------
-*/
-#about
-{
-    background:linear-gradient(var(--light),var(--white));
 }
 #about .developer_pic
 {
@@ -406,8 +411,41 @@
     transform:rotate(360deg) scale(1.1);
 }
 /*
+	welcome css -------------------------------------------------
+*/
+#welcome
+{
+	background: url('../data/transparent.png') no-repeat;
+	background-size: 100% 100%;
+}
+#welcome .display-1
+{
+	color: var(--levender);
+	text-shadow: 1px 1px 1rem var(--gray);
+}
+/*
+    android css -------------------------------------------------
+*/
+#android_app #view
+{
+    background: radial-gradient(circle at 50% 50%, var(--levender), var(--white), transparent);
+}
+#android_app .icon
+{
+    display: inline-block;
+	padding: 2rem !important;
+	font-size: 5em;
+	color: var(--light);
+	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
+	border-radius: 1rem;
+}
+/*
 	footer css -------------------------------------------------
 */
+#footer
+{
+	background: linear-gradient(to top, var(--levender), transparent);
+}
 #footer a
 {
 	text-decoration: none;	
@@ -419,10 +457,10 @@
 	font-weight: bold;
 	color: var(--primary);
 }
-/* section:not(#data_crypto)
+/*section:not(#data_crypto)
 {
 	display: none;
-} */
+}*/
 /*
     ============================================================
 */
