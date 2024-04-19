@@ -160,7 +160,7 @@
 #download_btn:hover
 {
 	border-radius: 0;
-	box-shadow: 5px 5px 10px var(--gray);
+	box-shadow: 0 0 30px var(--primary);
 }
 #aside
 {
@@ -364,7 +364,7 @@
 */
 #instruction
 {
-    background: radial-gradient(circle at 100% 50%,var(--levender), transparent, var(--white), var(--light));
+    background: radial-gradient(circle at 100% 50%,var(--levender), transparent, transparent, var(--light));
 }
 #instruction .bi-file-earmark-text
 {
@@ -386,7 +386,7 @@
 */
 #about
 {
-    background:linear-gradient(var(--light),var(--white));
+    background:transparent;
 }
 #about .icon
 {
@@ -394,7 +394,7 @@
 	padding: 1rem !important;
 	font-size: 3em;
 	color: var(--black);
-	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
+	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
 	border-radius: 1rem;
 }
 #about .developer_pic
@@ -438,6 +438,13 @@
 	color: var(--light);
 	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
 	border-radius: 1rem;
+}
+/*
+    status css -------------------------------------------------
+*/
+#status a:hover
+{
+    box-shadow: 0 0 50px var(--dark);
 }
 /*
 	footer css -------------------------------------------------
