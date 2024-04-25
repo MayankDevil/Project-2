@@ -149,7 +149,11 @@ try
         
         for (n = 2; n <= number; n++)
         {
-            if (isPrime(n))
+            if (prime_index = 9)
+            {
+                prime_index = 0
+            }
+            else if (isPrime(n))
             {
                 prime_index++
             }
