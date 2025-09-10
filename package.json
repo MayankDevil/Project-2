@@ -1,0 +1,30 @@
+{
+  "name": "GUPT",
+  "version": "2.0.0",
+  "description": "Ensuring Digital Data Security with Absolute Privacy",
+  "main": "index.html",
+  "scripts": {
+    "test": "node src/js/lipi.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MayankDevil/GUPT.git"
+  },
+  "keywords": [
+    "GUPT",
+    "CryptoGraphy",
+    "Secure",
+    "Password",
+    "Password",
+    "Generator",
+    "Secruity",
+    "Security",
+    "Level"
+  ],
+  "author": "Mayank & Hritik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MayankDevil/GUPT/issues"
+  },
+  "homepage": "https://github.com/MayankDevil/GUPT#readme"
+}

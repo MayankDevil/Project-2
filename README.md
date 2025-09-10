@@ -1,29 +1,17 @@
 
-# Project-2
+# GUPT
 
-- Name : "Gupt"
+__"Ensuring Digital Data Secruity with Absolute Privacy"__
 
-- Description : "Ensuring Digital Data Secruity with Absolute Privacy"
+_**GUPT** stands as a fortress of digital privacy, delivering cryptographic strength with zero compromise on user freedom. Unlike traditional tools, it ensures *absolute privacy* — no hidden tracking, no data collection, and no server dependency. Every action happens in your control, making it a trustworthy shield in today’s unsafe digital world._
 
-- Version : main
+_At its core, **GUPT** empowers users with powerful security tools. From generating unique, unbreakable passwords to validating their strength against modern attack standards, it transforms digital safety into a seamless experience. Its cryptography engine allows instant encryption and decryption of sensitive data, supported by secure key generation for maximum protection — all wrapped in an easy-to-use design._
 
-- Update : 17-03-2024
-
-- Status : REST
-
-- Responsive : True
-
-- TechStack : { HTML | CSS | JavaScript }
-
-- Thanks : { GitHub | VSCodium | GIMP | Bootstrap }
-
-- Collabrate : { MayankDevil | Hritikkumar975 }
-
-- URL : https://mayankdevil.github.io/Project-2/
-
-#### Project Look & Feel
+_What makes **GUPT** truly special is its accessibility. Free, transparent, and built with privacy-first principles, it puts advanced security into everyone’s hands. Whether you are strengthening personal accounts or safeguarding confidential data, GUPT provides the power of cryptography and the assurance of safety, without ever asking for your information._
 
 ![NETWORK_ERROR](./data/gupt.png)
+
+- URL : https://mayankdevil.github.io/Project-2/
 
 #### Responsive
 
@@ -47,7 +35,6 @@ _Immerse yourself in the elegance of simplicity with our Light Theme's deliberat
  
  - [x] Focus on Data Security
 
-
 ### Copyright Notice
 
 Copyright (c) 2024 by _Mayank_ & _HRitik_. All Rights Reserved.                *
@@ -65,8 +52,3 @@ https://github.com/MayankDevil/
 https://github.com/Hritikkumar975/
 
 Any unauthorized use of the material within this repository may constitute a violation of copyright law. Use only services.
-
-
-
-
-

@@ -1,27 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--
--   Project-2 "GUPT"
--   Designed | Developed by Mayank & HRitik
--   Copyright by Mayank( https://github.com/MayankDevil/ ) & HRitik ( https://github.com/Hritikkumar975/ )
--   HTML : ./index.html
+- Project-2 "GUPT"-(version-2.0.0)
+- File: /index.html
 -->
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MayankDevil & HRitik</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> GUPT </title>
+    <!-- description -->
+    <meta name="description" content="Ensuring Digital Data Secruity with Absolute Privacy" />
+    <!-- keywords -->
+    <meta name="keywords" content="GUPT, CryptoGraphy, Secure Password, Password Generator, Secruity, Security Level" />
+    <!-- author -->
+    <meta name="author" content="MayankDevil" />
+    <!-- open graph meta tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mayankdevil.github.io/Project-2/" />
+    <meta property="og:title" content="GUPT" />
+    <meta property="og:description" content="Ensuring Digital Data Secruity with Absolute Privacy" />
+    <meta property="og:image" content="https://mayankdevil.github.io/Project-2/public/img/favicon.png" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GUPT" />
+    <meta name="twitter:description" content="Ensuring Digital Data Secruity with Absolute Privacy" />
+    <meta name="twitter:image" content="https://mayankdevil.github.io/Project-2/public/img/favicon.png" />
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://mayankdevil.github.io/Project-2" />
     <!--
-		---------
-		| style |
-		---------
-	-->
-    <link rel="stylesheet" href="css/style.css">
+        --------- 
+        | style |
+        ---------
+    -->
+    <link rel="stylesheet" href="src/assets/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="src/assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!--
+        ---------- 
+        | script |
+        ----------
+    -->
+    <!-- <script src="src/assets/tailwindcss.js"></script> -->
+    <script src="src/assets/jQuery.min.js"></script>
+    
+    <!-- <script src="src/js/lipi.js"></script> -->
+    <script src="src/js/unique_password.js"></script>
+    <script src="src/js/secure_password.js"></script>
+	<script src="src/js/crypto.js"></script>
+    <script src="src/js/script.js"></script>
 
 </head>
 
-<body>
+<body class="">
     <!--
         ----------------------------------------------------------------------
         | main container | 
@@ -51,7 +84,7 @@
                     <!-- { introduction } -->
                     <div class="col-md-6 col-12 py-5">
 
-                        <div class="display-5" id="title"> &#2327;&#2369;प्त </div>
+                        <div class="display-4" id="title"> &#2327;&#2369;प्त </div>
 
                         <div class="display-1 py-5" id="subtitle"> GUPT  </div>
 
@@ -59,7 +92,7 @@
 
                         <p class="lead py-2"> Your digital fortress, zero data collection, just strong security. Control, fortify, and elevate your online safety. Discover us for a confidently secure experience. </p>
 
-                        <a href="./download.html" id="download_btn" title="Free Download OR Services"> <span class="bi bi-android"></span> Download </a>
+                        <a href="./app.html" id="download_btn" title="Free Download OR Services"> <span class="bi bi-android"></span> Download </a>
 
                     </div>
 
@@ -82,7 +115,7 @@
                             
                         </aside>
 
-                        <h3 class="p-3 py-5"> Quality Features <span class="bi bi-clipboard-check"></span> </h3>
+                        <h3 class="p-3 py-5"> Quality Features <span class="bi bi-clipboard-check text-success"></span> </h3>
 
                     </div>
 
@@ -124,7 +157,7 @@
                             <!-- ( set key length field ) -->
                             <label for="key_length" class="d-flex align-items-center justify-content-between pl-2 my-5 border-bottom">
 
-                                <input type="number" min="4" max="30" placeholder="[4-30]" class="p-2 w-25" id="key_length"> SET LENGTH  
+                                <input type="number" min="4" max="30" placeholder="[4-32]" class="p-2 w-25" id="key_length"> SET LENGTH  
 
                                 <button class="copy p-3" id="copy_password_btn"> <span class="bi bi-files"></span> copy </button>
                             
@@ -327,7 +360,7 @@
                     <!-- Mayank -->                   
                     <div class="col-md-6 col-12 py-md-0 py-5 text-center border-end">
                         
-                        <img src="./data/developer/mayank.jpg" class="developer_pic" alt="mayank" title="Think Simple Do Best Make Harder in Easy Steps">
+                        <img src="public/img/mayank.jpg" class="developer_pic" alt="mayank" title="Think Simple Do Best Make Harder in Easy Steps">
                     
                         <h1 class="text-dark py-md-5 py-3"> Mayank </h1>
                         
@@ -345,7 +378,7 @@
                     <!-- HRitik -->
                     <div class="col-md-6 col-12 py-md-0 py-5 text-center border-start">
                                                
-                        <img src="./data/developer/hritik.jpeg" class="developer_pic" alt="hritik" title="Your Democracy Has Been Hacked">
+                        <img src="public/img/hritik.jpeg" class="developer_pic" alt="hritik" title="Your Democracy Has Been Hacked">
                     
                         <h1 class="text-dark py-md-5 py-3"> Hritik </h1>
                         
@@ -373,7 +406,7 @@
             <div class="container">
                 <div class="row">
                 
-                    <h6 class="py-5 p-1 text-md-center text-start">
+                    <h6 class="py-5 p-1 inline-block mx-auto">
                         
                         CopyRight <span class="ent">&copy;</span> Designed | Developed by 
                         
@@ -394,13 +427,8 @@
 		| script |
 		----------
 	-->
-    <script src="js/gupt_lipi.js"></script>
-    <script src="js/unique_password.js"></script>
-    <script src="js/secure_password.js"></script>
-	<script src="js/crypto.js"></script>
-    <script src="js/script.js"></script>
     
 </body>
 
 </html>
-<!-- THE END -->
+<!-- Developed by Mayank & Hritik | ( https://github.com/MayankDevil/ ) & ( https://github.com/Hritikkumar975/ ) -->
