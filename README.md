@@ -9,7 +9,7 @@ _At its core, **GUPT** empowers users with powerful security tools. From generat
 
 _What makes **GUPT** truly special is its accessibility. Free, transparent, and built with privacy-first principles, it puts advanced security into everyone’s hands. Whether you are strengthening personal accounts or safeguarding confidential data, GUPT provides the power of cryptography and the assurance of safety, without ever asking for your information._
 
-![NETWORK_ERROR](./data/gupt.png)
+![NETWORK_ERROR](public/img/GUTP.png)
 
 - URL : https://mayankdevil.github.io/Project-2/
 
