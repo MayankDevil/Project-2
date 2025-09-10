@@ -1,7 +1,7 @@
 
 # GUPT
 
-__"Ensuring Digital Data Secruity with Absolute Privacy"__
+__Ensuring Digital Data Secruity with Absolute Privacy__
 
 _**GUPT** stands as a fortress of digital privacy, delivering cryptographic strength with zero compromise on user freedom. Unlike traditional tools, it ensures *absolute privacy* — no hidden tracking, no data collection, and no server dependency. Every action happens in your control, making it a trustworthy shield in today’s unsafe digital world._
 
@@ -9,7 +9,7 @@ _At its core, **GUPT** empowers users with powerful security tools. From generat
 
 _What makes **GUPT** truly special is its accessibility. Free, transparent, and built with privacy-first principles, it puts advanced security into everyone’s hands. Whether you are strengthening personal accounts or safeguarding confidential data, GUPT provides the power of cryptography and the assurance of safety, without ever asking for your information._
 
-![NETWORK_ERROR](public/img/GUTP.png)
+![NETWORK_ERROR](./public/img/GUTP.png)
 
 - URL : https://mayankdevil.github.io/Project-2/
 
