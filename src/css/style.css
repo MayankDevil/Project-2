@@ -1,0 +1,571 @@
+/*
+- Project-2 "GUPT"-(version-2.0.0)
+- File: ./src/css/style.css
+*/
+
+*
+{
+	user-select: none;
+	margin:0;
+	padding:0;
+	color:var(--black);
+	text-decoration: none;
+	font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji";
+	border:none;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/*
+    ----------------------
+    | BootStrap Icon CSS |
+    ----------------------
+*/
+.bi
+{
+    margin: 0 !important;
+    padding: 0.5rem !important;
+    font-size: 1rem;
+    color:var(--black);
+}
+/*
+	======================
+*/
+
+:root
+{
+    --white:#ffffff;
+    --black:#000000;
+    --dark:#343a40;
+    --light:#f8f9fa;
+    --gray:#6c757d;
+	--shade:#dff9fb;
+    --primary:#dc3545;
+    --secondary:#c23616;
+    --levender:#d9deff;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background: var(--black);
+}
+::-webkit-scrollbar-thumb
+{
+	background: linear-gradient(to top, var(--secondary),var(--primary));
+}
+.fld::selection
+{
+	color:var(--black);
+	background: var(--shade);
+}
+::placeholder
+{
+    color:var(--primary);
+}
+
+/*
+	body css --------------------------
+*/
+
+
+
+/*
+	main css ------------------------
+*/
+.isValid
+{
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 1rem;
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+	border-radius: 10px;
+}
+.isUnvalid
+{
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 1rem;
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+	border-radius: 10px;
+}
+/*
+	header css -------------------------------------------------
+*/
+#header
+{
+    position:fixed;
+    z-index:5;
+    top:0;
+    width:100%;
+    height:5vh;
+    background:linear-gradient(to top, transparent,var(--light));
+}
+#header a
+{
+    display:block;
+    height:5vh;
+    background:transparent;
+}
+/*
+	landing page css -------------------------------------------
+*/
+#landing
+{
+	background: url('../../public/img/transparent.png') no-repeat;
+	background-size: 100% 100%;
+}
+#landing h3 .bi
+{
+	font-size: 1.1em;
+	color:var(--bs-success);
+}
+#subtitle
+{
+	text-shadow: 1px 2px 5px var(--gray);
+}
+#title
+{
+	color: var(--light);
+	text-shadow: 1px 1px 1rem var(--gray);
+}
+#download_btn
+{
+	display: inline-block;
+	margin: 2rem auto;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	font-weight: bold;
+	color:var(--light);
+	background: var(--primary);
+	border-radius: 10px;
+}
+#download_btn .bi
+{
+	color:var(--white);
+}
+#download_btn:hover
+{
+	border-radius: 0;
+	box-shadow: 0 0 30px var(--primary);
+}
+#aside
+{
+	width: 80%;
+	margin: auto;
+	margin-right: 0;
+	padding:2rem 0;
+	border-left: 2px solid var(--black);
+}
+.feature_btn
+{
+	position: relative;
+	display: flex;
+	grid-gap:1rem;
+	align-items: center;
+	margin: 2rem;
+	margin-left: -1.5rem;
+	padding: 1px;
+	text-decoration: none;
+	font-size: 1.1rem;
+	background: rgba(255,255,255,0.5);
+	/* background: var(--primary); */
+	backdrop-filter: blur(10px);
+}
+.feature_btn .bi
+{
+	/* position: absolute; */
+	/* top: -0.5px; */
+	/* left:-3rem; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 40px;
+	width: 40px;
+	font-size: 1.2em;
+	color: var(--light);
+	background: var(--primary);
+	border-radius: 2rem;
+	transition: all 0.5s linear;
+}
+.feature_btn
+{
+    color:var(--dark) !important;
+}
+.feature_btn:hover
+{
+	text-decoration: none;
+	text-shadow: 3px 3px 5px var(--gray);
+}
+.feature_btn:hover .bi
+{
+	text-shadow: none;
+	background: var(--secondary);
+}
+/*
+	unquie_password_generator css ------------------------------
+*/
+#unique_password_generator
+{
+	min-height: 90vh;
+}
+#unique_password_generator
+{
+	display: grid;
+	align-items: center;
+}
+#password_generator_box
+{
+	max-width: 90%;
+	background: rgba(255,255,255,0.5);
+	backdrop-filter: blur(10);
+}
+#unique_password_fld
+{
+	padding: 1rem;
+}
+#unique_password_btn
+{
+	display: inline-block;
+	margin: 2rem auto;
+	padding: 1rem 2rem;
+}
+#unique_password_btn .bi
+{
+	color:var(--light);
+}
+#unique_password_btn:hover
+{
+	background: linear-gradient(60deg,var(--primary),var(--secondary)) !important;
+	border: none;
+}
+#unique_password_generator .icon
+{
+	display: inline-block;
+	padding: 2rem !important;
+	font-size: 4em;
+	color: var(--light);
+	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
+	border-radius: 1rem;
+}
+/*
+	secure password validation css -----------------------------
+*/
+#secure_password_validation
+{
+	min-height: 90vh;
+}
+#secure_password_validation .icon
+{
+	display: inline-block;
+	padding: 1rem !important;
+	font-size: 3em;
+	color: var(--light);
+	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
+	border-radius: 1rem;
+}
+#secure_password_fld
+{
+	padding: 1rem;
+}
+#secure_password_btn
+{
+	display: inline-block;
+	margin: 1rem auto;
+	padding: 1rem 2rem;
+}
+#secure_password_btn .bi
+{
+	color:var(--light);
+}
+#secure_password_btn:hover
+{
+	background: linear-gradient(60deg,var(--primary),var(--secondary)) !important;
+	border: none;
+}
+#validation .bi-shield-lock
+{
+	font-size: 1.2em;
+}
+/*
+	data cryptography css --------------------------------------
+*/
+#data_crypto .display-3
+{
+	color:var(--bs-gray);
+	text-shadow: 5px 10px 15px var(--gray) !important;
+}
+#data_crypto .icon
+{
+	display: inline-block;
+	padding: 1rem !important;
+	font-size: 1em;
+	color: var(--light);
+	background: linear-gradient(180deg,var(--primary),var(--secondary),var(--shade));
+	border-radius: 1rem ;
+}
+#data_io
+{
+	position: relative;
+	min-height: 80vh;
+	padding:1rem;
+	border-right: 1px dotted var(--bs-secondary);
+}
+#data_input_fld
+{
+	position: absolute;
+	z-index: 10;
+	top:15%;
+	left:15%;
+	min-height: 60vh;
+	width:80%;
+	resize: vertical;
+	padding: 1rem;
+	background: var(--white);
+}
+#data_output_fld
+{
+	position: absolute;
+	z-index: 5;
+	min-height: 60vh;
+	width: 80%;
+	resize: vertical;
+	padding: 1rem;
+	background: var(--light);
+}
+#crypto_key_fld
+{
+	width: 80%;
+	margin: 0 auto 1rem auto;
+	padding:0.5rem;
+}
+#data_crypto #button_group button:hover
+{
+    background:var(--primary);
+    border-color:var(--secondary);
+    margin: auto 5px;
+}
+.isActiveField
+{
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+	border-color: #86b7fe;
+	outline: 0;
+	box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+/*
+	instruction css --------------------------------------
+*/
+#download,
+#instruction
+{
+    background: radial-gradient(circle at 100% 50%,var(--levender), transparent, transparent, var(--light));
+}
+#instruction .bi-file-earmark-text
+{
+    font-size:1.1em;
+    color:var(--bs-gray);
+}
+#instruction #step
+{
+    border-left: 1px solid var(--bs-blue);
+}
+#instruction #step > li::after
+{
+    content : '.';
+    font-weight:bolder;
+    color:var(--primary);
+}
+/*
+    about css --------------------------------------
+*/
+#about
+{
+    background:transparent;
+}
+#about .icon
+{
+	display: inline-block;
+	padding: 1rem !important;
+	font-size: 3em;
+	color: var(--light);
+	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
+	border-radius: 1rem;
+}
+#about .developer_pic
+{
+    height:300px;
+    width:300px;
+    margin:auto;
+    object-fit:cover;
+    clip-path:circle(50% at 50% 50%);
+}
+#about .developer_pic:hover
+{
+    transition:transform 0.5s linear;
+    transform:rotate(360deg) scale(1.1);
+}
+/*
+	welcome css -------------------------------------------------
+*/
+#welcome
+{
+	background: url('../data/transparent.png') no-repeat;
+	background-size: 100% 100%;
+}
+#welcome .display-1
+{
+	color: var(--levender);
+	text-shadow: 1px 1px 1rem var(--gray);
+}
+/*
+    android css -------------------------------------------------
+*/
+#android_app #view
+{
+    background: radial-gradient(circle at 50% 50%, var(--levender), var(--white), transparent);
+}
+#android_app .icon
+{
+    display: inline-block;
+	padding: 2rem !important;
+	font-size: 5em;
+	color: var(--light);
+	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
+	border-radius: 1rem;
+}
+/*
+    status css -------------------------------------------------
+*/
+#status a:hover
+{
+    box-shadow: 0 0 50px var(--dark);
+}
+/*
+	footer css -------------------------------------------------
+*/
+#footer
+{
+	background: linear-gradient(to top, var(--levender), transparent);
+}
+#footer a
+{
+	text-decoration: none;	
+	font-size: large;
+}
+#footer .ent
+{
+	font-size: large;
+	font-weight: bold;
+	color: var(--primary);
+}
+/*section:not(#data_crypto)
+{
+	display: none;
+}*/
+/*
+    ============================================================
+*/
+
+/*
+	==================
+	[ RESPONSIVE CSS ]-----------------------------------------
+	==================
+*/
+
+/*
+    1200PX SCREEN CSS -----------------------------------------
+*/
+@media screen and  (max-width: 1200px)
+{
+}
+/*
+    992PX SCREEN CSS ------------------------------------------
+*/
+@media screen and  (max-width: 992px)
+{
+}
+/*
+    768PX SCREEN CSS ------------------------------------------
+*/
+@media screen and  (max-width: 768px)
+{
+	#unique_password_generator .row div
+	{
+		padding: 1rem !important;
+	}
+	#password_generator_box
+	{
+		max-width: 100% !important;
+		margin: 1rem auto;
+	}
+}
+/*
+    576PX SCREEN CSS ------------------------------------------
+*/
+@media screen and (max-width: 576px)
+{
+	#landing .row > .col-12
+	{
+		padding: 1rem;
+	}
+	#title
+	{
+		margin: auto 2rem;
+		text-align: right;
+	}
+	#subtitle
+	{
+		font-size: 5rem;
+	}
+	#aside
+	{
+		margin-left: 1.5rem;
+		width: 100% !important;
+	}
+
+	#unique_password_generator .row > div:last-child
+	{
+		padding: 3rem !important;
+	}
+
+	#data_io
+	{
+		min-height: 75vh;
+	}
+	#data_input_fld
+	{
+		top:10%;
+		left:15%;
+	}
+	#data_crypto #crypto_key_fld
+	{
+	    width:100%;
+	    margin-bottom:-1rem;
+	}
+	#data_crypto #button_group
+	{
+	    display:grid;
+	    grid-gap:5px;
+	}
+	#data_crypto #button_group button
+    {
+        margin:auto 10px;
+	    padding:10px;
+	    border-radius:10px;
+    }
+}
+/*
+    375PX SCREEN CSS ------------------------------------------
+*/
+@media screen and  (max-width: 375px)
+{
+}
+/* Developed by Mayank & Hritik | ( https://github.com/MayankDevil/ ) & ( https://github.com/Hritikkumar975/ ) */
