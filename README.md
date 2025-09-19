@@ -1,5 +1,5 @@
 
-# GUPT
+# GUPT (version-3.0.0)
 
 __Ensuring Digital Data Secruity with Absolute Privacy__
 
@@ -11,7 +11,7 @@ _What makes **GUPT** truly special is its accessibility. Free, transparent, and 
 
 ![NETWORK_ERROR](./public/img/GUTP.png)
 
-- URL : https://mayankdevil.github.io/Project-2/
+- URL : https://mayankdevil.github.io/GUPT/
 
 #### Responsive
 
