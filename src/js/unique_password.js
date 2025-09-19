@@ -1,13 +1,18 @@
 /*
-- Project-2 "GUPT"-(version-2.0.0)
+- Project-2 "GUPT"-(version-3.0.0)
 - File: /src/js/unique_password.js
 - Description: this script generate password according to user requirement
 */
 
-$(document).ready(function () {
+import GUPT from './lipi.js'
 
+
+$(document).ready(function () {
+    
     try
-    {   
+    {  
+        let app = new GUPT()
+        
         /*
             ======================================
             [ unique password generator function ]
@@ -20,19 +25,17 @@ $(document).ready(function () {
 
         let unique_password_btn = document.getElementById("unique_password_btn")
 
-        let copy_password_btn = document.getElementById('copy_password_btn')
-
         let number_check = document.getElementById('number_check')
 
         let symbol_check = document.getElementById('symbol_check')
         
-        unique_code = null
+        let unique_code = null
 
-        character_set = null
+        let character_set = null
 
-        hasNumber = false 
+        let hasNumber = false 
         
-        hasSymbol = false
+        let hasSymbol = false
 
         key_length.value = 8 // default legnth
 
@@ -58,6 +61,8 @@ $(document).ready(function () {
                 return
             }
             key_length.value = n
+
+            console.log(`unique password length is ${n}`)
         }
 
         /*
@@ -68,9 +73,9 @@ $(document).ready(function () {
 
         number_check.onchange = () => {
 
-            hasNumber = (hasNumber)? false : true;
+            hasNumber = !hasNumber
             
-            console.log(`\n _[has Number : ${hasNumber}]`)
+            console.log(`\n unqiue password has number : ${hasNumber}]`)
         }
 
         /*
@@ -81,9 +86,9 @@ $(document).ready(function () {
 
         symbol_check.onchange = () => {
 
-            hasSymbol = (hasSymbol)? false : true;
+            hasSymbol = !hasSymbol
             
-            console.log(`\n _[has Number : ${hasSymbol}]`)
+            console.log(`\n unqiue password has symbol : ${hasSymbol}]`)
         }
 
         /*
@@ -94,52 +99,27 @@ $(document).ready(function () {
 
         unique_password_btn.onclick = function()
         {
-            unique_code = ' '
+            unique_code = ''
 
-            character_set = letter
+            character_set = app.letter
                 
             if (hasNumber)
             {
-                character_set += number
+                character_set += app.number
             }
             if (hasSymbol)
             {
-                character_set += symbol;
+                character_set += app.symbol;
             }
 
             for (let i = 0; i < key_length.value; i++)
             {
-                unique_code += getRandom(character_set)
+                unique_code += app.getRandom(character_set)
+                // unique_code += getRandom(character_set)
             }
             unique_password_fld.value = unique_code
-
-            copy_password_btn.innerHTML = '<span class="bi bi-files"></span> copy'
             
-            console.log(`\n_[generated : unique password]`)
-        }
-
-        /*
-            -----------------------------------------------------------------
-            | copy password button onclick copy unique password field value |
-            -----------------------------------------------------------------
-        */
-        
-        copy_password_btn.onclick = (event) => {
-
-            try
-            {
-                unique_password_fld.select()
-                
-                document.execCommand("copy")
-
-                copy_password_btn.innerHTML = '<span class="bi bi-check"></span> copied'
-                
-                console.log(`\n_[copied] : unique password \n`)
-            }
-            catch(error)
-            {
-                window.alert(`_[copy failed]`)
-            }
+            console.log(`\n unqiue password is generated :${unique_code}`)
         }
 
         document.title = `Mayank & HRitik`

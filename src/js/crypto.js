@@ -1,5 +1,5 @@
 /*
-- Project-2 "GUPT"-(version-2.0.0)
+- Project-2 "GUPT"-(version-3.0.0)
 - File: /src/js/crypto.js
 */
 try

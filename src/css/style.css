@@ -1,5 +1,5 @@
 /*
-- Project-2 "GUPT"-(version-2.0.0)
+- Project-2 "GUPT"-(version-3.0.0)
 - File: ./src/css/style.css
 */
 
@@ -134,7 +134,7 @@
 #title
 {
 	color: var(--light);
-	text-shadow: 1px 1px 1rem var(--gray);
+	text-shadow: 0 0 20px  var(--gray);
 }
 #download_btn
 {
@@ -249,7 +249,7 @@
 #unique_password_generator .icon
 {
 	display: inline-block;
-	padding: 2rem !important;
+	padding: 5px 1rem !important;
 	font-size: 4em;
 	color: var(--light);
 	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
@@ -265,7 +265,7 @@
 #secure_password_validation .icon
 {
 	display: inline-block;
-	padding: 1rem !important;
+	padding: 5px 1rem !important;
 	font-size: 3em;
 	color: var(--light);
 	background: linear-gradient(var(--primary),var(--secondary),var(--shade));
@@ -305,7 +305,7 @@
 #data_crypto .icon
 {
 	display: inline-block;
-	padding: 1rem !important;
+	padding: 5px 1rem !important;
 	font-size: 1em;
 	color: var(--light);
 	background: linear-gradient(180deg,var(--primary),var(--secondary),var(--shade));
@@ -323,34 +323,107 @@
 	position: absolute;
 	z-index: 10;
 	top:15%;
-	left:15%;
-	min-height: 60vh;
+	left:18%;
 	width:80%;
+	text-align: right;
+	padding: 0 5px 5px 5px;
+	background: var(--shade);
+	background: #f0f4f4;
+	clip-path: polygon(0% 6%, calc(100% - 160px) 6%, calc(100% - 150px) 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#input_fld
+{
+	min-height: 60vh;
+	width: 100%;
 	resize: vertical;
 	padding: 1rem;
-	background: var(--white);
+	background: var(--white);	
+}
+#input_copy
+{
+	display: inline-block;
+	width: 150px;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: var(--gary);
+	background-color: transparent;
 }
 #data_output_fld
 {
 	position: absolute;
 	z-index: 5;
-	min-height: 60vh;
 	width: 80%;
+	padding: 5px 5px 0 5px;
+	background: var(--levender);
+	clip-path: polygon(0% 0%, 100% 0%, 100% 94%, calc(0% + 160px) 94%, calc(0% + 150px) 100%, 0% 100%);
+}
+#output_fld
+{
+	min-height: 60vh;
+	width: 100%;
 	resize: vertical;
 	padding: 1rem;
 	background: var(--light);
 }
+#output_copy
+{
+	display: inline-block;
+	width: 150px;
+	padding: 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: var(--gray);
+	background-color: transparent;
+}
+
+#key_parent
+{
+	display: flex;
+	align-items: center;
+	width: 80%;
+	margin: auto;
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+	border-color: var(--levender);
+	background: var(--light);
+	box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
 #crypto_key_fld
 {
-	width: 80%;
-	margin: 0 auto 1rem auto;
-	padding:0.5rem;
+	margin: 5px;
+	border: none;
+}
+#key_copy
+{
+	background:transparent;
+}
+#data_crypto #button_group button
+{
+	color:var(--dark);
+	background: var(--light);
+	box-shadow: 0 0 20px var(--levender);
+	border: 2px solid var(--shade);
 }
 #data_crypto #button_group button:hover
 {
-    background:var(--primary);
-    border-color:var(--secondary);
-    margin: auto 5px;
+	background: transparent;
+	border-color: var(--dark);
+	transform: translateY(-5px);
+	transition: all 0.5s linear;
+}
+#data_crypto #button_group button span
+{
+    color:var(--dark);
+}
+#data_crypto_#button_group select
+{
+	padding: 10px 15px;
+	font-weight: bold;
+	color:var(--dark);
+	background: var(--light);
+	border: 3px solid var(--shade);
+	border-radius: 20px;
 }
 .isActiveField
 {
@@ -383,6 +456,12 @@
     font-weight:bolder;
     color:var(--primary);
 }
+#lang_btn
+{
+	border-radius: 20px;
+	background: transparent;
+	border: 1px solid var(--levender);
+}
 /*
     about css --------------------------------------
 */
@@ -393,7 +472,7 @@
 #about .icon
 {
 	display: inline-block;
-	padding: 1rem !important;
+	padding: 5px 1rem !important;
 	font-size: 3em;
 	color: var(--light);
 	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
@@ -435,7 +514,7 @@
 #android_app .icon
 {
     display: inline-block;
-	padding: 2rem !important;
+	padding: 5px 1rem !important;
 	font-size: 5em;
 	color: var(--light);
 	background: linear-gradient(var(--primary),var(--secondary),var(--levender));
@@ -529,13 +608,39 @@
 	{
 		margin-left: 1.5rem;
 		width: 100% !important;
+		padding: 10px 0 20px 0;
 	}
-
+	.feature_btn
+	{
+		position: relative;
+		display: flex;
+		grid-gap:1rem;
+		align-items: center;
+		margin: 1.5rem;
+		margin-left: -1.5rem;
+		padding: 1px;
+		text-decoration: none;
+		font-size: 1.1rem;
+		background: rgba(255,255,255,0.5);
+		/* background: var(--primary); */
+		backdrop-filter: blur(10px);
+	}
 	#unique_password_generator .row > div:last-child
 	{
 		padding: 3rem !important;
 	}
-
+	#data_crypto h1
+	{
+		display: grid;
+		align-items: center;
+		place-content: space-around;
+	}
+	#data_crypto h1 .icon
+	{
+		display: inline-block;
+		width: 100px;
+		text-align: center;
+	}
 	#data_io
 	{
 		min-height: 75vh;
@@ -545,10 +650,10 @@
 		top:10%;
 		left:15%;
 	}
-	#data_crypto #crypto_key_fld
+	#key_parent
 	{
-	    width:100%;
-	    margin-bottom:-1rem;
+		width: 98%;
+		margin: 1rem auto;
 	}
 	#data_crypto #button_group
 	{
