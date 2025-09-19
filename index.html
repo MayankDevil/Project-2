@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-- Project-2 "GUPT"-(version-2.0.0)
+- Project-2 "GUPT"-(version-3.0.0)
 - File: /index.html
 -->
 <html lang="en">
@@ -45,12 +45,10 @@
     -->
     <!-- <script src="src/assets/tailwindcss.js"></script> -->
     <script src="src/assets/jQuery.min.js"></script>
-    
-    <!-- <script src="src/js/lipi.js"></script> -->
-    <script src="src/js/unique_password.js"></script>
-    <script src="src/js/secure_password.js"></script>
-	<script src="src/js/crypto.js"></script>
-    <script src="src/js/script.js"></script>
+	<!-- <script src="src/js/crypto.js"></script> -->
+    <script type='module' src="src/js/unique_password.js"></script>
+    <script type='module' src="src/js/secure_password.js"></script>
+    <script type='module' src="src/js/script.js"></script>
 
 </head>
 
@@ -82,10 +80,10 @@
                 <div class="row border-bottom border-lg">
 
                     <!-- { introduction } -->
-                    <div class="col-md-6 col-12 py-5">
+                    <div class="col-md-6 col-12 py-md-5 py-0">
 
-                        <div class="display-4" id="title"> &#2327;&#2369;प्त </div>
-
+                        <div class="h1" id="title"> &#2327;&#2369;प्त </div>
+                        
                         <div class="display-1 py-5" id="subtitle"> GUPT  </div>
 
                         <div class="h1 text-muted py-3"> Ensuring Digital Data Security with Absolute Privacy </div>
@@ -115,7 +113,7 @@
                             
                         </aside>
 
-                        <h3 class="p-3 py-5"> Quality Features <span class="bi bi-clipboard-check text-success"></span> </h3>
+                        <h3 class="p-3 py-md-5 py-0"> Quality Features <span class="bi bi-clipboard-check text-success"></span> </h3>
 
                     </div>
 
@@ -134,9 +132,9 @@
                     <!-- { unique heading } -->
                     <div class="col-md-6 col-12 py-5 order-md-last">
 
-                        <div class="d-block text-center my-5">
+                        <div class="d-block text-center my-md-5 my-0">
 
-                            <div class="text-center"> <span class="bi bi-file-earmark-lock2-fill icon"></span> </div>
+                            <div class="text-center"> <span class="bi bi-fingerprint icon"></span> </div>
                             
                             <h1 class="p-md-1 my-5"> Unique Password Generator </h1>
                             
@@ -147,9 +145,9 @@
                     </div>
 
                     <!-- { password generator } -->
-                    <div class="col-md-6 col-12 py-5">
+                    <div class="col-md-6 col-12 py-0">
 
-                        <div class="shadow-lg rounded my-5 p-3" id="password_generator_box">
+                        <div class="shadow-lg rounded my-md-5 my-2 p-3" id="password_generator_box">
 
                             <!-- ( random password field ) -->
                             <input type="text" class="fld form-control my-3" id="unique_password_fld" placeholder="Unique Password"/>
@@ -159,7 +157,7 @@
 
                                 <input type="number" min="4" max="30" placeholder="[4-32]" class="p-2 w-25" id="key_length"> SET LENGTH  
 
-                                <button class="copy p-3" id="copy_password_btn"> <span class="bi bi-files"></span> copy </button>
+                                <button class="copy p-3 bi bi-files" id="copy_password_btn"> COPY </button>
                             
                             </label>
                         
@@ -209,7 +207,7 @@
 
                             <div class="d-block text-center my-5">
 
-                                <div class="text-center"> <span class="bi bi-person-fill-lock icon"></span> </div>
+                                <div class="text-center"> <span class="bi bi-incognito icon"></span> </div>
                                 
                                 <h1 class="p-md-1 my-5"> Secure Password Validation </h1>
                                 
@@ -252,41 +250,61 @@
                     <!-- { io field } -->
                     <div class="col-12">
 
-                        <div class="display-3 my-5 py-5"> <span class="bi bi-database-fill-lock icon"></span> Data CryptoGraphy </div>
+                        <h1 class="h1 my-5 py-5"> <span class="bi bi-database-lock icon"></span> Data CryptoGraphy </h1>
 
                         <div class="lead text-muted m-3 my-5"> Your Secure Haven - Super Features, Cryptography for Free, and Zero Data Collection. Because your privacy matters, always. </div>
 
                         <div  class="" id="data_io">
+
                             <!-- ( data input field ) -->
-                            <textarea name="data_input_fld" id="data_input_fld" class="form-control isActiveField" placeholder="write data in  _input_field_"></textarea>
+                            <div id="data_input_fld">
+                                <button class="bi bi-files copy_button" id="input_copy"> COPY INPUT</button>
+                                <textarea name="data_input_fld" id="input_fld" class="form-control isActiveField" placeholder="write data in  _input_field_"></textarea>
+                            </div>
+                            
                             <!-- ( data output field ) -->
-                            <textarea name="data_output_fld" id="data_output_fld" class="form-control" placeholder="copy data form _output_field_"></textarea>
-                        
+
+                            <div id="data_output_fld">
+                                <textarea name="data_output_fld" id="output_fld" class="form-control" placeholder="copy data form _output_field_"></textarea>
+                                <button class="bi bi-files copy_button" id="output_copy"> COPY OUTPUT </button>
+                            </div>
+
+                            
+
                         </div>
                     
                     </div>
                     <!-- { crypto key field } -->
                     <div class="col-12">
 
-                        <input type="text" name="crypto_key_fld" class="form-control" id="crypto_key_fld" placeholder="input OR generat Crypto Key">
-                        
+                        <div class="" id="key_parent">
+
+                            <input type="text" name="crypto_key_fld" class="form-control" id="crypto_key_fld" placeholder="input OR generat Crypto Key">
+                            
+                            <button class="bi bi-files copy_button" id="key_copy"></button>
+                        </div>
+
                     </div>
                     <!-- { operation field } -->
-                    <div class="col-12 py-5 btn-group" id="button_group">
+                    <div class="col-12 py-5 text-center" id="button_group">
                         
-                        <button class="btn btn-outline-dark" id="crypto_key_btn" title="Generat the new crypto key"> Crypto Key </button>
+                        <button class="btn" id="all_clear" title="clear input field , output field and key field"> <span class="bi bi-eraser"></span> All Clear </button>
 
-                        <button class="btn btn-outline-dark" id="key_copy_btn" title="Copy the crypto key"> Copy Key </button>
+                        <button class="btn" id="store" title="store OUTPUT AND KEY locally"> <span class="bi bi-database"></span> Store </button>
+                        
+                        <button class="btn" id="crypto_key_btn" title="Generat the new crypto key"> <span class="bi bi-key"></span> New Key </button>
 
-                        <button class="btn btn-outline-dark" id="encode_btn" title="encode your input field data that show encrypted in output field"> Encrypt </button>
+                        <button class="btn" id="encode_btn" title="encode your input field data that show encrypted in output field"> <span class="bi bi-lock"></span> Encrypt </button>
                         
-                        <button class="btn btn-outline-dark" id="decode_btn" title="decode your input field data that show decrypted in output field"> Decrypt </button>
-                        
-                        <button class="btn btn-outline-dark" id="input_copy_btn" title="copy the input field data"> Copy Input </button>
-                        
-                        <button class="btn btn-outline-dark" id="output_copy_btn" title="copy the output field data"> Copy Output </button>
-                        
-                        <button class="btn btn-outline-dark" id="all_clear" title="clear input field , output field and key field"> All Clear </button>
+                        <button class="btn" id="decode_btn" title="decode your input field data that show decrypted in output field"> <span class="bi bi-unlock"></span> Decrypt </button>
+
+                        <select class="btn border-danger text-danger" id="crypt_type">
+                            <option value="0"> encrypt/decrypt </option>
+                            <option value="1"> UTF-8 Crypto </option>
+                            <option value="2"> (8-bit) Crypto </option>
+                            <option value="3"> Key/Crypto </option>
+                            <option value="4"> Key/Crypto (8-bit) </option>
+                        </select>
 
                     </div>
                     
@@ -308,18 +326,18 @@
                         <h1 class="p-md-1 my-5 text-dark"> <span class="bi bi-file-earmark-text"></span> Instruction To use  </h1>
                         
                         <ol class="" id="step">
-                            <li class="text-muted py-3"> Please use the <span class="text-primary"> button </span> to Copy OR Clear OR <b>Crypto Key</b>  </li>
+                            <li class="text-muted py-3"> Please use the <span class="text-primary"> button </span> to Copy OR Clear OR <b> New Crypto Key</b>  </li>
                             <li class="text-muted py-3"> <b>_input_field_</b> allow users to <span class="text-primary"> Insert Data </span> if they are empty </li>
                             <li class="text-muted py-3"> <b>_output_field_</b> is specifically for <span class="text-primary"> Copy Data </span> OR <span class="text-primary"> Display </span> the outcome </li>
-                            <li class="text-muted py-3"> generating Key is not a must, but Key provide <span class="text-primary"> more_secure_data </span> </li>
+                            <li class="text-muted py-3"> generating <b>new key</b> is not a must, but Key provide <span class="text-primary"> more_secure_data </span> </li>
                             <li class="text-muted py-3"> Key encrypted data is decrypt by <span class="text-primary"> same Key </span> </li>
                             <li class="text-muted py-3"> don't be <span class="text-primary"> loss </span> AND <span class="text-primary"> corrupt </span> Key OR Data </li>
                             <li class="text-muted py-3"> before Key (<b>encrypt</b>ion AND <b>decrypt</b>ion) be Generated AND Inserted <span class="text-primary"> Crypto Key </span> </li>
-                            <li class="text-muted py-3"> <b>copyed</b> Key OR Data before <span class="text-primary"> all clear </span> </li>
+                            <li class="text-muted py-3"> <b>copy</b> Key OR Data before <span class="text-primary"> all clear </span> </li>
                             <li class="text-muted py-3"> clear All to reuse <b>GUPT</b> </li>
                         </ol>
                         
-                        <button class="btn p-0" id="lang_btn" title="change language">language</button>
+                        <button class="btn" id="lang_btn" title="change language">language</button>
                               
                     </div>
                     <div class="col"></div>
@@ -362,7 +380,7 @@
                         
                         <img src="public/img/mayank.jpg" class="developer_pic" alt="mayank" title="Think Simple Do Best Make Harder in Easy Steps">
                     
-                        <h1 class="text-dark py-md-5 py-3"> Mayank </h1>
+                        <h1 class="text-dark py-3"> Mayank </h1>
                         
                         <div class="btn-group">
                     
@@ -380,7 +398,7 @@
                                                
                         <img src="public/img/hritik.jpeg" class="developer_pic" alt="hritik" title="Your Democracy Has Been Hacked">
                     
-                        <h1 class="text-dark py-md-5 py-3"> Hritik </h1>
+                        <h1 class="text-dark py-3"> Hritik </h1>
                         
                         <div class="btn-group">
                     
